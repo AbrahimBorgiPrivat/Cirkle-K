@@ -52,7 +52,7 @@ This allows one failed step to be logged without halting the full pipeline.
 Run any orchestrator using Poetry:
 
 ```bash
-poetry run python scripts/run_simulation_pipeline.py
+poetry run python scripts/pipelines/cirkleKsimulations.py
 ```
 
 Replace the filename as needed to run ingestion or enrichment pipelines.

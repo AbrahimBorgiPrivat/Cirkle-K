@@ -1,60 +1,52 @@
-# Rapports
+# Circle K Simulated Case — Power BI Project
 
-This repository contains the Power BI solution for **Bekey**, designed to deliver insights into key operational metrics such as installations, user activity, and distributions. The dashboards combine detailed semantic modeling with interactive visual reports for end-user exploration.
+This workspace contains the Power BI solution for the **Circle K Loyalty Simulation Project**, designed to explore customer behavior, segmentation, and campaign engagement through interactive dashboards and data modeling.
 
----
-
-## Project Structure
-
-### `figures/`
-This folder contains various assets and icons used within the reports and dashboard design, such as:
-- User and installation illustrations (`users.png`, `installed.png`)
-- Financial and pricing references (`realiseret.png`, `gns pris.png`)
-- Visual aids for technician activities (`MontørMonteringer.png`, `Montørjobs.png`)
-- Icons for UI/UX elements (`close-the-door-icon.png`, `users.png`, etc.)
-
-### `finans/`
-This is the core of the Power BI model.
-
-- **Finans - Bekey - Rapport**  
-  Contains the `Report file` for the main rapport.
-  - `.Report`: The report model for the first rapport currently ready for deployment
-  - `.SemanticModel`: Dummy semantic model not containing data since the connection is dirsctly to the other semantic model 
-  - `.pbip`: Combined project file for this model
-
-  For extended documentation, visit the [BeKey Finance - Visuals](https://northmedia.atlassian.net/wiki/spaces/DRT/pages/35455234/Rapport+Model).
-
-- **Finans - Bekey - SemanticModel**  
-  Contains the `Semantic model` for the main rapport.
-  - `.Report`: Dummy .Report file cause the file is mandatory in the pbib file structure
-  - `.SemanticModel`: The semantic model
-  - `.pbip`: Combined project file for this model
-
-  For extended documentation, visit the [BeKey Finance - Semantisk Model](https://northmedia.atlassian.net/wiki/spaces/DRT/pages/14057495/Semantisk+Model).
-
-### `Img | Pages/`
-This folder includes page-level visual assets used in reports:
-- `Background.png` – Report image for background
-
-### `Tema-BeKey.json`
-Custom Power BI theme file that ensures consistent branding, font styles, and color schemes across all visuals and pages.
+The project is structured using Power BI’s `.pbip` format and includes a custom theme, report pages, and semantic model.
 
 ---
 
-## Getting Started
+## 📁 Project Structure
 
-1. Open the `.pbip` file (`Finans - Bekey.pbip`) in Power BI Desktop.
-3. Customize visualizations or extend the model as needed.
+### `pbip/`
+This is the core of the Power BI project, structured according to the PBIP folder convention.
+
+- **Circle K Simulated Case.pbip**  
+  Combined entry file for the Power BI project  
+  - `.Report`: Visual layout and report page definitions  
+  - `.SemanticModel`: Semantic model structure with relationships, measures, and metadata  
+  - `.pbip`: PBIP file linking components together  
+
+> Note: This solution runs on simulated data generated for case demonstration purposes. No real customer data is used.
 
 ---
 
-## Requirements
-
-- Power BI Desktop (version supporting `.pbip` project format)
-- Access to relevant Bekey data sources 
+### `Images/`
+Contains visual assets used in the report pages, such as custom background images and layout elements.
 
 ---
 
-## Contact
+### `CirkleKPBITheme.json`
+Custom Power BI theme file, designed to align the report visuals with Circle K’s visual identity — using branded color palettes, font styles, and layout consistency.
 
-For questions or contributions, please reach out to the NM Datateam.
+---
+
+## 🚀 Getting Started
+
+1. Open the `Circle K Simulated Case.pbip` file in **Power BI Desktop (PBIP-compatible version)**.
+2. Review or edit the semantic model if needed.
+3. View or interact with the report pages to explore campaign, segment, and transaction data.
+4. Optional: Modify or apply a different theme by switching out `CirkleKPBITheme.json`.
+
+---
+
+## ✅ Requirements
+
+- Power BI Desktop with `.pbip` format support (v2.116 or newer recommended)
+- No external data access required — all data is simulated and self-contained
+
+---
+
+## ℹ️ Contact
+
+For questions about the simulation model or report design, please refer to the main project documentation or reach out to **Andreas Bruger**.

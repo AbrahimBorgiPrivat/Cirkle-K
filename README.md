@@ -4,27 +4,23 @@ This repository is organized into four main directories, each serving a specific
 
 ---
 
-### `/code/`
+### `/source/`
 Contains all relevant python scripts, modules, or automation logic used in the project.  
-See the dedicated [`code/README.md`](./code/README.md) for details.
 
 ---
 
-### `/documentation/`
+### `/docs/`
 Holds manuals, design notes, project descriptions, and other written documents that support understanding or onboarding.
-For extended documentation, visit the [BeKey Finance and KPI Reporting Wiki](https://northmedia.atlassian.net/wiki/spaces/DRT/pages/15204354/BeKey+Finance-+and+KPI+Reporting).
 
 ---
 
-### `/files/`
+### `/resources/`
 Used to store raw data files and resources consumed by the project.
-See the dedicated [`files/README.md`](./files/README.md) for details.
 
 ---
 
-### `/rapports/`
+### `/workspaces/`
 This folder includes generated reports and semanticmodels and the visual elements (png,img) used in the reporting.  
-More info available in [`rapports/README.md`](./rapports/README.md).
 
 ---
 

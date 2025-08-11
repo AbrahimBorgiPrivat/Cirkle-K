@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Cirkle K Simulated Case"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c33b39a5-bfec-4370-a178-991959094685"
+  }
+}
