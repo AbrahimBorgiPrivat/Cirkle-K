@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Katjes",
+    "description": "For hver 5. købt Katjes pose får du en gratis",
+    "product_id": 7,
+    "number": 5,
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31",
+    "active": true
+  },
+  {
+    "id": 2,
+    "name": "Coca-Cola 0,5L",
+    "description": "For hver 5 købt Coca-Cola, får du en gratis 0,5l",
+    "product_id": 8,
+    "number": 5,
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31",
+    "active": true
+  },
+  {
+    "id": 3,
+    "name": "Egekilde",
+    "description": "For hver 5 Egekilde købt får du en gratis",
+    "product_id": 9,
+    "number": 5,
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31",
+    "active": true
+  },
+  {
+    "id": 4,
+    "name": "Kaffe",
+    "description": "For hver 5. købt kaffe får du en gratis",
+    "product_id": 10,
+    "number": 5,
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31",
+    "active": true
+  },
+  {
+    "id": 5,
+    "name": "Red Bull (0,355 l)",
+    "description": "For hver 5. købt Red Bull får du en gratis (0,355 l)",
+    "product_id": 11,
+    "number": 5,
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31",
+    "active": true
+  },
+  {
+    "id": 6,
+    "name": "Is",
+    "description": "For hver 5 købt is får du en gratis",
+    "product_id": 12,
+    "number": 5,
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31",
+    "active": true
+  },
+  {
+    "id": 7,
+    "name": "Faxe Kondi Booster 0,5l",
+    "description": "For hver 5. Faxe Kondi Booster får du en gratis 0,5l",
+    "product_id": 13,
+    "number": 5,
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31",
+    "active": true
+  },
+  {
+    "id": 8,
+    "name": "Bilvask",
+    "description": "For hver 5 bilvask får du en gratis",
+    "product_id": 5,
+    "number": 5,
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31",
+    "active": true
+  }
+]

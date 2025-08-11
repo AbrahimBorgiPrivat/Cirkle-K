@@ -1,0 +1,106 @@
+[
+  {
+    "product_id": 1,
+    "name": "95 Oktan Fuel",
+    "type": "gas",
+    "quantifier": "Liter",
+    "standard_price": false,
+    "price": null
+  },
+  {
+    "product_id": 2,
+    "name": "Diesel Fuel",
+    "type": "gas",
+    "quantifier": "Liter",
+    "standard_price": false,
+    "price": null
+  },
+  {
+    "product_id": 3,
+    "name": "Electric Fast Charge",
+    "type": "electric",
+    "quantifier": "KwH",
+    "standard_price": false,
+    "price": null
+  },
+  {
+    "product_id": 4,
+    "name": "Windshield Washer Fluproduct_id",
+    "type": "cashier",
+    "quantifier": "Units",
+    "standard_price": true,
+    "price": 39.95
+  },
+  {
+    "product_id": 5,
+    "name": "Car Wash Basic",
+    "type": "service",
+    "quantifier": "Units",
+    "standard_price": true,
+    "price": 79.00
+  },
+  {
+    "product_id": 6,
+    "name": "Car Wash Premium",
+    "type": "service",
+    "quantifier": "Units",
+    "standard_price": true,
+    "price": 129.00
+  },
+  {
+    "product_id": 7,
+    "name": "Katjes",
+    "type": "cashier",
+    "quantifier": "Units",
+    "standard_price": true,
+    "price": 15.00
+  },
+  {
+    "product_id": 8,
+    "name": "Coca Cola",
+    "type": "cashier",
+    "quantifier": "Units",
+    "standard_price": true,
+    "price": 20.00
+  },
+  {
+    "product_id": 9,
+    "name": "Egekilde",
+    "type": "cashier",
+    "quantifier": "Units",
+    "standard_price": true,
+    "price": 12.00
+  },
+  {
+    "product_id": 10,
+    "name": "Kaffe",
+    "type": "cashier",
+    "quantifier": "Units",
+    "standard_price": true,
+    "price": 15.00
+  },
+  {
+    "product_id": 11,
+    "name": "Red Bull",
+    "type": "cashier",
+    "quantifier": "Units",
+    "standard_price": true,
+    "price": 20.00
+  },
+  {
+    "product_id": 12,
+    "name": "Is",
+    "type": "cashier",
+    "quantifier": "Units",
+    "standard_price": true,
+    "price": 12.00
+  },
+  {
+    "product_id": 13,
+    "name": "Faxe Kondi Booster",
+    "type": "cashier",
+    "quantifier": "Units",
+    "standard_price": true,
+    "price": 15.00
+  }
+]

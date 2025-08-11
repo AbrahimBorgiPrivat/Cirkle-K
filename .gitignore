@@ -1,0 +1,23 @@
+# Ignore PBI temporary files
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+
+# Ignore DAR and DAGI JSON resource files
+resource/json/DAGI_*.json
+resource/json/DAR_*.json
+
+# Keep all other JSON files (allow override of wild ignore rules)
+!resource/json/PRODUCTS.json
+!resource/json/SEGMENTATIONSGROUPS.json
+!resource/json/CAMPAIGNS.json
+
+# Ignore environment and cache files
+.env
+.venv
+**/__pycache__**
+logs/
+systemd/pid
+
+# Ignore editor and session-specific files
+.vscode
+nohup.out

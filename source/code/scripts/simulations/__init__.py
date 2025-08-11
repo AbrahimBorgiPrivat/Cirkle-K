@@ -1,0 +1,1 @@
+from .loyality_customer_cards import main

@@ -1,0 +1,25 @@
+[project]
+name = "bekey_reporting"
+version = "0.1.1"
+description = "Code for BeKey reporting solutions"
+authors = [
+    {name = "Abrahim Borgi"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "requests (>=2.32.3,<3.0.0)",
+    "dotenv (>=0.9.9,<0.10.0)",
+    "tqdm (>=4.67.1,<5.0.0)",
+    "sqlalchemy (>=2.0.38,<3.0.0)",
+    "pandas (>=2.2.3,<3.0.0)",
+    "psycopg2 (>=2.9.10,<3.0.0)",
+    "openpyxl (>=3.1.5,<4.0.0)",
+    "pymysql (>=1.1.1,<2.0.0)",
+    "faker (>=37.5.3,<38.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

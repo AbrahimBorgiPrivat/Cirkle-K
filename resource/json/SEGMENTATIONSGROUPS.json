@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "name": "EV Commuter",
+    "description": "Owns electric vehicle, charges frequently, usually buys coffee/snacks.",
+    "avg_txn_per_month": 8,
+    "product_types": {
+      "electric": 0.6,
+      "cashier": 0.3,
+      "service": 0.1
+    },
+    "peak_hours": [7, 8, 9, 15, 16, 17],
+    "hour_weights": [0.15, 0.2, 0.25, 0.15, 0.15, 0.1],
+    "weekday_weights": [0.22, 0.20, 0.18, 0.15, 0.15, 0.06, 0.04]
+  },
+  {
+    "id": 2,
+    "name": "Fuel-Only Driver",
+    "description": "Drives a gasoline/diesel car, mostly refuels, rarely enters the store.",
+    "avg_txn_per_month": 4,
+    "product_types": {
+      "gas": 0.9,
+      "cashier": 0.1
+    },
+    "peak_hours": [6, 7, 8, 16, 17, 18],
+    "hour_weights": [0.2, 0.25, 0.15, 0.15, 0.15, 0.1],
+    "weekday_weights": [0.18, 0.18, 0.16, 0.14, 0.14, 0.10, 0.10]
+  },
+  {
+    "id": 3,
+    "name": "Heavy Shopper",
+    "description": "Frequent visitor, buys snacks, drinks, fuel — loyal to brand.",
+    "avg_txn_per_month": 12,
+    "product_types": {
+      "gas": 0.4,
+      "cashier": 0.5,
+      "service": 0.1
+    },
+    "peak_hours": [10, 11, 14, 16, 17, 18],
+    "hour_weights": [0.15, 0.15, 0.25, 0.2, 0.15, 0.1],
+    "weekday_weights": [0.12, 0.12, 0.14, 0.16, 0.16, 0.15, 0.15]
+  },
+  {
+    "id": 4,
+    "name": "Car Wash User",
+    "description": "Visits primarily for car washes, occasionally shops inside.",
+    "avg_txn_per_month": 3,
+    "product_types": {
+      "service": 0.7,
+      "cashier": 0.3
+    },
+    "peak_hours": [10, 11, 12, 13, 14],
+    "hour_weights": [0.15, 0.2, 0.25, 0.2, 0.2],
+    "weekday_weights": [0.10, 0.12, 0.14, 0.14, 0.20, 0.16, 0.14]
+  },
+  {
+    "id": 5,
+    "name": "Price Sensitive",
+    "description": "Visits when promotions or discounts are available, irregular pattern.",
+    "avg_txn_per_month": 2,
+    "product_types": {
+      "cashier": 0.5,
+      "gas": 0.3,
+      "electric": 0.2
+    },
+    "peak_hours": [9, 12, 15, 18, 19, 20],
+    "hour_weights": [0.1, 0.15, 0.25, 0.2, 0.15, 0.15],
+    "weekday_weights": [0.10, 0.10, 0.12, 0.14, 0.18, 0.18, 0.18]
+  }
+]
