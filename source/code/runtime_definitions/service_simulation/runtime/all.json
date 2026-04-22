@@ -1,0 +1,53 @@
+{
+  "modules": [
+    {
+      "name": "Upsert Stations",
+      "module": "libraries.scripts.upserts.stations",
+      "kwargs": {
+        "create_table_if_not_exist": true
+      }
+    },
+    {
+      "name": "Simulate Products",
+      "module": "libraries.scripts.upserts.simu_products",
+      "kwargs": {
+        "create_table_if_not_exist": true
+      }
+    },
+    {
+      "name": "Simulate Campaign Groups",
+      "module": "libraries.scripts.upserts.simu_campaignsgroups",
+      "kwargs": {
+        "create_table_if_not_exist": true
+      }
+    },
+    {
+      "name": "Simulate Segmentation Groups",
+      "module": "libraries.scripts.upserts.simu_segmentationgroups",
+      "kwargs": {
+        "create_table_if_not_exist": true
+      }
+    },
+    {
+      "name": "Simulate Cashiers",
+      "module": "libraries.scripts.upserts.simu_cashier",
+      "kwargs": {
+        "create_table_if_not_exist": true
+      }
+    },
+    {
+      "name": "Simulate Customers and Cards",
+      "module": "libraries.scripts.upserts.simu_customer_cards",
+      "kwargs": {
+        "create_table_if_not_exist": true
+      }
+    },
+    {
+      "name": "Simulate Transactions",
+      "module": "libraries.scripts.upserts.simu_transactions",
+      "kwargs": {
+        "create_table_if_not_exist": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "client": {
+    "db_name": "POSTGRES_DB",
+    "username": "POSTGRES_USERNAME",
+    "password": "POSTGRES_PASSWORD",
+    "server": "POSTGRES_HOST",
+    "port": "POSTGRES_PORT",
+    "db_type": "DB_TYPE"
+  },
+  "sql_queries": [
+    "create_table_and_views/queries/migration/001_postgis.sql",
+    "create_table_and_views/queries/table/public__campaign_transactions.sql",
+    "create_table_and_views/queries/table/public__campaigns.sql",
+    "create_table_and_views/queries/table/public__cards.sql",
+    "create_table_and_views/queries/table/public__cashier.sql",
+    "create_table_and_views/queries/table/public__loyality_customers.sql",
+    "create_table_and_views/queries/table/public__products.sql",
+    "create_table_and_views/queries/table/public__segmentationsgroups.sql",
+    "create_table_and_views/queries/table/public__stations.sql",
+    "create_table_and_views/queries/table/public__transaction_lines.sql",
+    "create_table_and_views/queries/table/public__transactions.sql",
+    "create_table_and_views/queries/view/public__loyality_customers_view.sql",
+    "create_table_and_views/queries/view/public__segmentationsgroup_view.sql",
+    "create_table_and_views/queries/view/public__stations_view.sql",
+    "create_table_and_views/queries/view/public__transactions_view.sql"
+  ]
+}

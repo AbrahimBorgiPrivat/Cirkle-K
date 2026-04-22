@@ -1,0 +1,21 @@
+{
+  "client": {
+    "db_name": "POSTGRES_DB",
+    "username": "POSTGRES_USERNAME",
+    "password": "POSTGRES_PASSWORD",
+    "server": "POSTGRES_HOST",
+    "port": "POSTGRES_PORT",
+    "db_type": "DB_TYPE"
+  },
+  "sql_queries": [
+    "create_table_and_views/queries/migration/001_postgis.sql",
+    "create_table_and_views/queries/schema/interview.sql",
+    "create_table_and_views/queries/table/interview__item_images.sql",
+    "create_table_and_views/queries/table/interview__item_master.sql",
+    "create_table_and_views/queries/table/interview__site_master.sql",
+    "create_table_and_views/queries/table/interview__transactions.sql",
+    "create_table_and_views/queries/view/interview__item_master_view.sql",
+    "create_table_and_views/queries/view/interview__site_master_view.sql",
+    "create_table_and_views/queries/view/interview__transactions_view.sql"
+  ]
+}

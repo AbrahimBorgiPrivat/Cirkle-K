@@ -1,0 +1,28 @@
+services:
+  service_create_table_views_from_sql_circlek:
+    build:
+      context: ../../../../..
+      dockerfile: source/code/service/etl/service_create_table_views_from_sql/Dockerfile
+    container_name: service_create_table_views_from_sql_circlek
+    env_file:
+      - .env
+    environment:
+      RUNNER_MODULE: libraries.runners.create_table_and_views_from_sql
+      RUNTIME_NAMESPACE: create_table_and_views
+      SERVICE_NAME: service_create_table_views_from_sql_circlek
+    volumes:
+      - ./app:/app/app
+      - ../../../runtime_definitions/create_table_and_views:/app/runtime_definitions/create_table_and_views
+    networks:
+      - data_network
+    command: ["poetry", "run", "python", "app/main.py"]
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 1
+        window: 30s
+
+networks:
+  data_network:
+    external: true

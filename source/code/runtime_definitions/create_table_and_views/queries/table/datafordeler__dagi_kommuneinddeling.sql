@@ -1,0 +1,28 @@
+CREATE TABLE IF NOT EXISTS "datafordeler"."dagi_kommuneinddeling"
+(
+    "id" bigint NOT NULL,
+    "feltliste" text,
+    "navn" text,
+    "status" text,
+    "gml_id" text,
+    "dag_id" text,
+    "lau_1_vaerdi" text,
+    "id_namespace" text,
+    "kommunekodeid" text,
+    "udenfor_kommuneinddeling" text,
+    "region_lokal_id" bigint,
+    "landekode" text,
+    "skala" text,
+    "geometristatus" text,
+    "geometri" text,
+    "virkning_fra" timestamp without time zone,
+    "virkning_til" timestamp without time zone,
+    "virkningsaktoer" text,
+    "registrering_fra" timestamp without time zone,
+    "registrering_til" timestamp without time zone,
+    "registreringsaktoer" text,
+    "datafordeler_opdateringstid" timestamp without time zone,
+    "updatetime" timestamp without time zone,
+    "createdtime" timestamp without time zone,
+    CONSTRAINT "dagi_kommuneinddeling_pkey" PRIMARY KEY (id)
+);

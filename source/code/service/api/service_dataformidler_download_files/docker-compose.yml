@@ -1,0 +1,24 @@
+services:
+  service_dataformidler_download_files_circlek:
+    build:
+      context: ../../../../..
+      dockerfile: source/code/service/api/service_dataformidler_download_files/Dockerfile
+    container_name: service_dataformidler_download_files_circlek
+    env_file:
+      - ../../../.env
+    environment:
+      RUNNER_MODULE: libraries.runners.module_sequence
+      RUNTIME_NAMESPACE: service_dataformidler_download_files
+      RUNTIME_FILES: all.json
+      SERVICE_NAME: service_dataformidler_download_files_circlek
+    volumes:
+      - ./app:/app/app
+      - ../../../runtime_definitions/service_dataformidler_download_files:/app/runtime_definitions/service_dataformidler_download_files
+      - ../../../../../resource:/app/resource
+    command: ["poetry", "run", "python", "app/main.py"]
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 1
+        window: 30s

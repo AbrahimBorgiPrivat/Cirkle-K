@@ -1,0 +1,8 @@
+{
+  "modules": [
+    {
+      "name": "Download Datafordeler Files",
+      "module": "libraries.scripts.api.dataformidler_download_files"
+    }
+  ]
+}

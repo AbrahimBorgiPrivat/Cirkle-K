@@ -1,0 +1,17 @@
+{
+  "client": {
+    "db_name": "POSTGRES_DB",
+    "username": "POSTGRES_USERNAME",
+    "password": "POSTGRES_PASSWORD",
+    "server": "POSTGRES_HOST",
+    "port": "POSTGRES_PORT",
+    "db_type": "DB_TYPE"
+  },
+  "sql_queries": [
+    "create_table_and_views/queries/migration/001_postgis.sql",
+    "create_table_and_views/queries/schema/default_data.sql",
+    "create_table_and_views/queries/table/default_data__d_date.sql",
+    "create_table_and_views/queries/view/default_data__date_view.sql",
+    "create_table_and_views/queries/view/default_data__simple_date_view_2017_18.sql"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "client": {
+    "db_name": "POSTGRES_DB",
+    "username": "POSTGRES_USERNAME",
+    "password": "POSTGRES_PASSWORD",
+    "server": "POSTGRES_HOST",
+    "port": "POSTGRES_PORT",
+    "db_type": "DB_TYPE"
+  },
+  "sql_queries": [
+    "create_table_and_views/queries/migration/001_postgis.sql",
+    "create_table_and_views/queries/schema/datafordeler.sql",
+    "create_table_and_views/queries/table/datafordeler__dagi_kommuneinddeling.sql",
+    "create_table_and_views/queries/table/datafordeler__dagi_landsdel.sql",
+    "create_table_and_views/queries/table/datafordeler__dagi_postnummerinddeling.sql",
+    "create_table_and_views/queries/table/datafordeler__dagi_regionsinddeling.sql",
+    "create_table_and_views/queries/table/datafordeler__dagi_storkreds.sql",
+    "create_table_and_views/queries/table/datafordeler__dar_adresse.sql",
+    "create_table_and_views/queries/table/datafordeler__dar_adressepunkt.sql",
+    "create_table_and_views/queries/table/datafordeler__dar_husnummer.sql",
+    "create_table_and_views/queries/table/datafordeler__dar_navngivenvej.sql",
+    "create_table_and_views/queries/table/datafordeler__dar_postnummer.sql"
+  ]
+}

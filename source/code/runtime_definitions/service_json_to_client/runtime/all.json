@@ -1,0 +1,74 @@
+{
+  "modules": [
+    {
+      "name": "DAGI Kommuneinddeling",
+      "module": "libraries.scripts.upserts.dagi_kommuneinddeling",
+      "kwargs": {
+        "create_table_if_not_exist": true
+      }
+    },
+    {
+      "name": "DAGI Landsdel",
+      "module": "libraries.scripts.upserts.dagi_landsdel",
+      "kwargs": {
+        "create_table_if_not_exist": true
+      }
+    },
+    {
+      "name": "DAGI Postnummerinddeling",
+      "module": "libraries.scripts.upserts.dagi_postnummeriddeling",
+      "kwargs": {
+        "create_table_if_not_exist": true
+      }
+    },
+    {
+      "name": "DAGI Region",
+      "module": "libraries.scripts.upserts.dagi_region",
+      "kwargs": {
+        "create_table_if_not_exist": true
+      }
+    },
+    {
+      "name": "DAGI Storkreds",
+      "module": "libraries.scripts.upserts.dagi_storkreds",
+      "kwargs": {
+        "create_table_if_not_exist": true
+      }
+    },
+    {
+      "name": "DAR Adresse",
+      "module": "libraries.scripts.upserts.dar_adresse",
+      "kwargs": {
+        "create_table_if_not_exist": true
+      }
+    },
+    {
+      "name": "DAR Adressepunkt",
+      "module": "libraries.scripts.upserts.dar_adressepunkt",
+      "kwargs": {
+        "create_table_if_not_exist": true
+      }
+    },
+    {
+      "name": "DAR Husnummer",
+      "module": "libraries.scripts.upserts.dar_husnummer",
+      "kwargs": {
+        "create_table_if_not_exist": true
+      }
+    },
+    {
+      "name": "DAR Navngivenvej",
+      "module": "libraries.scripts.upserts.dar_navngivenvej",
+      "kwargs": {
+        "create_table_if_not_exist": true
+      }
+    },
+    {
+      "name": "DAR Postnummer",
+      "module": "libraries.scripts.upserts.dar_postnummer",
+      "kwargs": {
+        "create_table_if_not_exist": true
+      }
+    }
+  ]
+}

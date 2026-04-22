@@ -1,0 +1,28 @@
+CREATE TABLE IF NOT EXISTS "datafordeler"."dar_navngivenvej"
+(
+    "id" text NOT NULL,
+    "vejnavn" text,
+    "udtalt_vejnavn" text,
+    "vejadresseringsnavn" text,
+    "vejnavnebeliggenhed_oprindelse_kilde" text,
+    "vejnavnebeliggenhed_oprindelse_nojagtighedsklasse" text,
+    "vejnavnebeliggenhed_oprindelse_registrering" timestamp without time zone,
+    "vejnavnebeliggenhed_oprindelse_teknisk_standard" text,
+    "vejnavnebeliggenhed_vejnavnelinje" text,
+    "vejnavnebeliggenhed_vejnavneomraade" text,
+    "vejnavnebeliggenhed_vejtilslutningspunkter" text,
+    "administreres_af_kommune" text,
+    "beskrivelse" text,
+    "id_namespace" text,
+    "status" text,
+    "virkning_fra" timestamp without time zone,
+    "virkning_til" timestamp without time zone,
+    "virkningsaktoer" text,
+    "registrering_fra" timestamp without time zone,
+    "registrering_til" timestamp without time zone,
+    "registreringsaktoer" text,
+    "datafordeler_opdateringstid" timestamp without time zone,
+    "updatetime" timestamp without time zone,
+    "createdtime" timestamp without time zone,
+    CONSTRAINT "dar_navngivenvej_pkey" PRIMARY KEY (id)
+);

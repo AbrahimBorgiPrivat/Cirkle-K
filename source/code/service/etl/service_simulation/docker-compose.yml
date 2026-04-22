@@ -1,0 +1,29 @@
+services:
+  service_simulation_circlek:
+    build:
+      context: ../../../../..
+      dockerfile: source/code/service/etl/service_simulation/Dockerfile
+    container_name: service_simulation_circlek
+    env_file:
+      - .env
+    environment:
+      RUNNER_MODULE: libraries.runners.module_sequence
+      RUNTIME_NAMESPACE: service_simulation
+      SERVICE_NAME: service_simulation_circlek
+    volumes:
+      - ./app:/app/app
+      - ../../../runtime_definitions/service_simulation:/app/runtime_definitions/service_simulation
+      - ../../../../../resource:/app/resource
+    networks:
+      - data_network
+    command: ["poetry", "run", "python", "app/main.py"]
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 1
+        window: 30s
+
+networks:
+  data_network:
+    external: true
