@@ -1,29 +1,34 @@
-# Files Directory
+# Resource Directory
 
-This directory contains external data files used in the project.
+This folder contains shared runtime assets used by both the Python services and the Power BI workspace.
 
----
+## Contents
 
-## Structure Overview
+- `json`
+Downloaded source files and static seed files used by the ETL and simulation services.
+- `powerbi`
+Theme file and image assets used by the PBIP workspace.
 
-<details>
-<summary><strong>/json/</strong> - Auto-Generated Data</summary>
+## `json`
 
-- Collection of JSON files related to geographical and address information.
-- Examples:
-  - `DAGI_Kommuneinddeling_1.json`
-  - `DAR_Adresse_1.json`
-  - etc.
+This folder is used for:
 
-**Note:** These files are **ignored by Git** to keep the repository clean and lightweight.
+- DAR and DAGI files downloaded from Datafordeler
+- static simulation seed files such as `CircleKCompany.json`, `PRODUCTS.json`, `CAMPAIGNS.json`, and `SEGMENTATIONSGROUPS.json`
 
-</details>
+To populate or refresh the downloaded Datafordeler files, run:
 
----
+```powershell
+docker compose -f source\code\service\api\service_dataformidler_download_files\docker-compose.yml up --build
+```
 
-## How to Populate `/json`
+The download service writes into `resource/json` through a mounted volume.
 
-Run the following command to download and enrich the `/json` files:
+## `powerbi`
 
-```bash
-python source/code/scripts/pipelines/datafordeler_main.py
+This folder contains shared Power BI assets:
+
+- `CirkleKPBITheme.json`
+- `Images/*`
+
+These files are referenced by the report workspace in `source/workspaces/pbip`.
