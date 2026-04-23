@@ -31,53 +31,81 @@
       </nav>
     </header>
 
-    <section class="hero">
-      <div class="hero-grid">
-        <div>
-          <div class="eyebrow">Circle K / GitHub Pages / Power BI</div>
-          <h1>Two short Circle K cases in one delivery</h1>
-          <p class="lead">
-            This site presents a compact version of the solution: purpose, ETL flow, semantic model,
-            report pages, and the main findings from both the interview case and the loyalty simulation case.
-          </p>
-          <div class="button-row">
-            <a class="button button-primary" href="./project-purpose.html">Start with purpose</a>
-            <a class="button button-secondary" href="./power-bi-report.html">See report pages</a>
-          </div>
-          <div class="hero-note">
-            The interview case focuses on ice-cream sales, promotion impact, and site comparison.
-            The simulation case shows a broader loyalty analytics pipeline from synthetic data to Power BI.
-          </div>
-        </div>
+    <section class="hero home-hero">
+      <div class="home-hero-intro">
+        <div class="eyebrow">Circle K / GitHub Pages / Power BI</div>
+        <h1>Two short Circle K cases in one delivery</h1>
+        <p class="lead">
+          This site presents a compact version of the solution: purpose, ETL flow, semantic model,
+          report pages, and the main findings from both the interview case and the loyalty simulation case.
+        </p>
+      </div>
 
-        <div class="visual-card">
-          <div class="visual-header">
-            <img src="../assets/simulation/logo.png" alt="Circle K logo" />
-            <div>
-              <strong style="display:block; color: var(--ck-blue);">Circle K Power BI</strong>
-              <span>Interview insights and simulated loyalty reporting</span>
-            </div>
-          </div>
-          <img src="../assets/interview/page1.png" alt="Circle K dashboard overview" />
-        </div>
+      <div class="button-row hero-actions">
+        <a class="button button-primary" href="./project-purpose.html">Start with purpose</a>
+        <a class="button button-secondary" href="./power-bi-report.html">See report pages</a>
+        <a class="button button-secondary" href="https://github.com/AbrahimBorgiPrivat/Cirkle-K/blob/main/docs/interview/Homework%20-%20Circle%20K.pdf" target="_blank" rel="noreferrer">Interview report</a>
+        <a class="button button-secondary" href="https://github.com/AbrahimBorgiPrivat/Cirkle-K/blob/main/docs/simulation/Abrahim_Borgi_CircleK_Simulation_Project.pdf" target="_blank" rel="noreferrer">Simulation report</a>
+        <a class="button button-secondary" href="https://github.com/AbrahimBorgiPrivat/Cirkle-K/blob/main/docs/simulation/Abrahim_Borgi_CircleK_Case_QA.pdf" target="_blank" rel="noreferrer">Simulation Q&amp;A</a>
       </div>
 
       <div class="stats-grid">
         <div class="stat-card">
-          <strong>6</strong>
-          <span>Power BI pages documented</span>
-        </div>
-        <div class="stat-card">
           <strong>2</strong>
           <span>Business cases covered</span>
+        </div>
+        <div class="stat-card">
+          <strong>6</strong>
+          <span>Power BI pages</span>
         </div>
         <div class="stat-card">
           <strong>5+</strong>
           <span>Docker services in the end-to-end flow</span>
         </div>
         <div class="stat-card">
+          <strong>21+</strong>
+          <span>Data load flows</span>
+        </div>
+        <div class="stat-card">
           <strong>E2E</strong>
           <span>From data ingestion to report storytelling</span>
+        </div>
+      </div>
+
+      <div class="section-header home-gallery-header">
+        <div class="kicker">Report preview</div>
+        <h2>Three pages from the delivery</h2>
+        <p class="lead">
+          A quick look at the interview overview and two pages from the simulated loyalty reporting case.
+        </p>
+      </div>
+
+      <div class="gallery-grid home-report-grid">
+        <div class="gallery-card">
+          <img src="../assets/interview/page1.png" alt="Interview overview report page" />
+          <div class="gallery-copy">
+            <div class="tile-meta">Interview</div>
+            <h3>Overview</h3>
+            <p>Sales, margin, SPLY, and product performance in one compact page.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="../assets/simulation/page1.png" alt="Simulation overview report page" />
+          <div class="gallery-copy">
+            <div class="tile-meta">Simulation</div>
+            <h3>Program overview</h3>
+            <p>Program footprint, revenue patterns, and station-level concentration.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="../assets/simulation/page2.png" alt="Simulation segmentation report page" />
+          <div class="gallery-copy">
+            <div class="tile-meta">Simulation</div>
+            <h3>Segmentation</h3>
+            <p>Customer mix, sign-up behavior, and long-term value differences.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -157,19 +185,6 @@
       </div>
     </section>
 
-    <section class="footer-cta">
-      <div>
-        <div class="kicker">Next step</div>
-        <h2>Start with the project purpose</h2>
-        <p>
-          If you want the shortest version of the story, begin with purpose and then jump to the report pages.
-        </p>
-      </div>
-      <div class="button-row">
-        <a class="button button-primary" href="./project-purpose.html">Open article 01</a>
-        <a class="button button-secondary" href="./tabular-editor.html">Open article 07</a>
-      </div>
-    </section>
   </div>
 </body>
 </html>
