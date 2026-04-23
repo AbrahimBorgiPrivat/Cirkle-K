@@ -91,6 +91,10 @@
   grid-template-columns: 1.05fr 0.95fr;
 }
 
+.article-layout {
+  margin-top: 34px;
+}
+
 .stats-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   margin-top: 22px;

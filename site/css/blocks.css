@@ -34,7 +34,7 @@
   border-radius: 999px;
   font-size: 0.9rem;
   font-weight: 800;
-  padding: 10px 16px;
+  padding: 12px 18px;
   text-decoration: none;
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
@@ -94,6 +94,12 @@
   margin-bottom: 10px;
 }
 
+.hero .button-row {
+  gap: 16px;
+  margin-bottom: 24px;
+  margin-top: 24px;
+}
+
 .compact-list {
   display: grid;
   gap: 10px;
@@ -110,6 +116,15 @@
 .compact-list li:first-child {
   border-top: 0;
   padding-top: 0;
+}
+
+.quote-block p:last-child,
+.hero-note p:last-child,
+.sidebar-card p:last-child,
+.gallery-copy p:last-child,
+.feature-copy p:last-child,
+.article-body p:last-child {
+  margin-bottom: 0;
 }
 
 .visual-card {
