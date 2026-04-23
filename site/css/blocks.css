@@ -12,18 +12,18 @@
   background:
     linear-gradient(180deg, rgba(227, 30, 36, 0.14) 0, rgba(227, 30, 36, 0.14) 8px, #ffffff 8px, #ffffff 100%);
   overflow: hidden;
-  padding: 28px;
+  padding: 34px;
 }
 
 .page-hero {
-  margin-bottom: 20px;
-  padding: 24px;
+  margin-bottom: 24px;
+  padding: 30px;
 }
 
 .section-panel {
   background: linear-gradient(180deg, #fbfcfe 0%, #f2f6fb 100%);
-  margin-top: 22px;
-  padding: 22px;
+  margin-top: 26px;
+  padding: 28px;
 }
 
 .section-panel.plain {
@@ -78,12 +78,38 @@
 .feature-card,
 .gallery-card,
 .article-body {
-  padding: 18px;
+  padding: 22px;
 }
 
 .quote-block,
 .hero-note {
   color: var(--ck-muted);
+}
+
+.quote-block h3,
+.hero-note h3 {
+  color: var(--ck-blue);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.compact-list {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.compact-list li {
+  border-top: 1px solid rgba(23, 52, 95, 0.08);
+  padding-top: 10px;
+}
+
+.compact-list li:first-child {
+  border-top: 0;
+  padding-top: 0;
 }
 
 .visual-card {
@@ -141,7 +167,7 @@
 
 .feature-copy,
 .gallery-copy {
-  padding: 18px;
+  padding: 22px;
 }
 
 .tile-meta {
@@ -160,8 +186,8 @@
 
 .article-body section + section {
   border-top: 1px solid var(--ck-line);
-  margin-top: 20px;
-  padding-top: 20px;
+  margin-top: 24px;
+  padding-top: 24px;
 }
 
 .footer-cta {
