@@ -1,0 +1,17 @@
+VAR selIndex = SELECTEDVALUE ( '_CUSTOMTABLE - METRICSTABLE'[Index], 1 )
+VAR selMetric =
+    SWITCH (
+        selIndex,
+        1, "SALES MARGIN",
+        2, "TOTAL SALE",
+        3, "TOTAL EXPENSE",
+        4, "AVERAGE TRANSACTIONS",
+        5, "NUMBER OF TRANSACTIONS",
+        6, "TOTAL COST PRICE",
+        7, "AVERAGE PRICE PER UNIT",
+        8, "AVERAGE NUMBER OF UNITS",
+        9, "AVERAGE COST PER UNIT",
+        "SALES MARGIN"
+    )
+RETURN
+    selMetric

@@ -1,0 +1,88 @@
+"
+<style>
+  :root{
+    --ck-red:#E41E26;      /* Circle K red */
+    --ck-orange:#F5A623;   /* SPLY orange accent */
+    --ink:#1f1f1f;
+    --muted:#666;
+    --card:#ffffff;
+    --line:#e6e6e6;
+    --bg:#fafafa;
+    --positive:#2ecc71;
+    --negative:#d9534f;
+  }
+  .ck{font-family: Segoe UI, Roboto, Arial, sans-serif; color:var(--ink); }
+  .panel{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:10px 12px; box-shadow:0 1px 2px rgba(0,0,0,.04);}
+  .hdr{display:flex; align-items:center; gap:8px; margin:0 0 6px;}
+  .logo-dot{width:10px; height:10px; border-radius:50%; background:var(--ck-red);}
+  .sub{font-size:12px; color:var(--muted); margin:0 0 8px;}
+  /* Accordion */
+  details{border:1px solid var(--line); border-radius:10px; background:var(--bg); margin:8px 0;}
+  summary{list-style:none; cursor:pointer; padding:10px 12px; font-weight:700; display:flex; align-items:center; justify-content:space-between;}
+  summary::-webkit-details-marker{display:none;}
+  details[open] summary{border-bottom:1px solid var(--line);}
+  .caret{flex:0 0 auto; width:0; height:0; border-left:6px solid transparent; border-right:6px solid transparent; border-top:8px solid var(--ck-red); transition:transform .18s;}
+  details[open] .caret{transform:rotate(180deg);}
+  .body{padding:10px 12px; background:#fff; border-radius:0 0 10px 10px;}
+  .list{margin:6px 0 0 18px; padding:0;}
+  .list li{margin:4px 0;}
+  .badge{display:inline-block; font-size:11px; padding:2px 6px; border-radius:999px; border:1px solid var(--line); background:#f7f7f7; margin-left:6px;}
+  .dot{display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:6px;}
+  .dot-red{background:var(--ck-red);} .dot-or{background:var(--ck-orange);}
+  .tip{font-size:12px; color:#444; padding:8px 10px; border-left:3px solid var(--ck-orange); background:#fff8f0; border-radius:6px; margin-top:8px;}
+</style>
+
+<div class='ck'>
+
+  <div class='panel'>
+    <div class='hdr'>
+      <span class='logo-dot'></span>
+      <div>
+        <div style='font-weight:800; letter-spacing:.2px;'>OVERVIEW PAGE – HELP</div>
+        <div class='sub'>High-level KPIs with trends and flexible breakdowns. Open the sections below to learn more.</div>
+      </div>
+    </div>
+
+    <!-- Section: Page Purpose -->
+    <details open>
+      <summary>Page visuals <span class='caret'></span></summary>
+      <div class='body'>
+        <ul class='list'>
+          <li>KPI cards summarize <b>Total Sale</b>, <b>Margin</b>, and <b>Transactions</b> with SPLY deltas.</li>
+          <li>The trend compares the selected metric against last year (<span class='dot dot-red'></span>Metric, <span class='dot dot-or'></span>SPLY).</li>
+          <li>The <b>Breakdown tree</b> lets you drill the selected metric by the dimensions you choose (e.g., Region → Site → Item).</li>
+          <li>Top products highlight best performers for quick context.</li>
+        </ul>
+        <div class='tip'>The <b>Metric</b> slicer drives most visuals on this page.</div>
+      </div>
+    </details>
+
+    <!-- Section: Slicers -->
+    <details>
+      <summary>Slicers (consistent across pages) <span class='caret'></span></summary>
+      <div class='body'>
+        <ul class='list'>
+          <li><b>Metric</b><span class='badge'>primary</span> – switches the KPI used across visuals (e.g., Sales, Sales Margin, Transactions).</li>
+          <li><b>Promo Type</b> – include <i>all</i>, only <i>promo</i>, or <i>non-promo</i> transactions to isolate the 2018 ice-cream campaign.</li>
+          <li><b>Region, Site</b> – focus on a geography or one/more stations; affects tree and charts.</li>
+          <li><b>Date range</b> – sets the analysis window; SPLY refers to the same window one year earlier.</li>
+        </ul>
+        <div class='tip'>Combine <b>Promo Type = Promo</b> with a specific <b>Site</b> to see where uplift comes from.</div>
+      </div>
+    </details>
+
+    <!-- Section: How to read -->
+    <details>
+      <summary>How to read the visuals <span class='caret'></span></summary>
+      <div class='body'>
+        <ul class='list'>
+          <li><span class='dot dot-red'></span><b>Metric</b> = current period &nbsp;|&nbsp; <span class='dot dot-or'></span><b>SPLY</b> = same period last year.</li>
+          <li>Green badges in cards indicate uplift vs. SPLY; red badges indicate a decline.</li>
+          <li>The breakdown tree totals always match the selected metric and update with your slicers.</li>
+        </ul>
+      </div>
+    </details>
+
+  </div>
+</div>
+"

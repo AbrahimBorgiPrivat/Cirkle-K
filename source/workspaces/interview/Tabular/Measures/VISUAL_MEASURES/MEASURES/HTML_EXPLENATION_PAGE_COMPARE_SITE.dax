@@ -1,0 +1,113 @@
+"
+<style>
+  :root{
+    --ck-red:#E41E26;      /* Circle K red */
+    --ck-orange:#F5A623;   /* SPLY/orange accent */
+    --ink:#1f1f1f; --muted:#666; --card:#fff; --line:#e6e6e6; --bg:#fafafa;
+  }
+  .ck{font-family:Segoe UI, Roboto, Arial, sans-serif; color:var(--ink);}
+  .panel{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:10px 12px; box-shadow:0 1px 2px rgba(0,0,0,.04);}
+  .hdr{display:flex; align-items:center; gap:8px; margin:0 0 6px;}
+  .logo-dot{width:10px; height:10px; border-radius:50%; background:var(--ck-red);}
+  .sub{font-size:12px; color:var(--muted); margin:0 0 8px;}
+
+  /* Accordion */
+  details{border:1px solid var(--line); border-radius:10px; background:var(--bg); margin:8px 0;}
+  summary{list-style:none; cursor:pointer; padding:10px 12px; font-weight:700; display:flex; align-items:center; justify-content:space-between;}
+  summary::-webkit-details-marker{display:none;}
+  details[open] summary{border-bottom:1px solid var(--line);}
+  .caret{flex:0 0 auto; width:0; height:0; border-left:6px solid transparent; border-right:6px solid transparent; border-top:8px solid var(--ck-red); transition:transform .18s;}
+  details[open] .caret{transform:rotate(180deg);}
+  .body{padding:10px 12px; background:#fff; border-radius:0 0 10px 10px;}
+  .list{margin:6px 0 0 18px; padding:0;}
+  .list li{margin:4px 0;}
+  .badge{display:inline-block; font-size:11px; padding:2px 6px; border-radius:999px; border:1px solid var(--line); background:#f7f7f7; margin-left:6px;}
+  .dot{display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:6px;}
+  .dot-red{background:var(--ck-red);} .dot-or{background:var(--ck-orange);}
+  .tip{font-size:12px; color:#444; padding:8px 10px; border-left:3px solid var(--ck-orange); background:#fff8f0; border-radius:6px; margin-top:8px;}
+</style>
+
+<div class='ck'>
+  <div class='panel'>
+    <div class='hdr'>
+      <span class='logo-dot'></span>
+      <div>
+        <div style='font-weight:800; letter-spacing:.2px;'>COMPARE SITES – HELP</div>
+        <div class='sub'>Compare two site groups (A vs. B) and test whether differences are statistically meaningful.</div>
+      </div>
+    </div>
+
+    <!-- Purpose -->
+    <details open>
+      <summary>Page purpose <span class='caret'></span></summary>
+      <div class='body'>
+        <ul class='list'>
+          <li><b>Radar chart</b> shows the KPI profile for <span class='dot dot-red'></span>Group A and <span class='dot dot-or'></span>Group B.</li>
+          <li><b>Results table</b> quantifies totals, averages, differences, % differences, SDs, test size, p-values and a significance flag.</li>
+          <li>Focus on the four core metrics to keep the comparison actionable.</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- Site selectors -->
+    <details>
+      <summary>Pick your groups (Site A & Site B) <span class='caret'></span></summary>
+      <div class='body'>
+        <ul class='list'>
+          <li>Use the <b>Site A</b> selector (left) to choose one or more stations for Group A.</li>
+          <li>Use the <b>Site B</b> selector (right) to choose one or more stations for Group B.</li>
+          <li>The radar and table update instantly based on your selections.</li>
+        </ul>
+        <div class='tip'>Example: compare a test site against a best-performing site, or west vs. east regions.</div>
+      </div>
+    </details>
+
+    <!-- Slicers -->
+    <details>
+      <summary>Slicers (top of page) <span class='caret'></span></summary>
+      <div class='body'>
+        <ul class='list'>
+          <li><b>Promo</b> — include all, only promo, or non-promo transactions.</li>
+          <li><b>Region, Site</b> — pre-filter the list of available stations for A/B selection.</li>
+          <li><b>Period</b> — set the analysis window; SPLY references the same window last year.</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- Metrics compared -->
+    <details>
+      <summary>Metrics compared (4) <span class='caret'></span></summary>
+      <div class='body'>
+        <ul class='list'>
+          <li>Sales margin per day × site</li>
+          <li>Total sale per day × site</li>
+          <li>Average gross amount</li>
+          <li>Average number of units per transaction</li>
+        </ul>
+        <div class='tip'>The table reports <b>Total A/B</b>, <b>Mean A/B</b>, <b>Diff (B−A)</b>, <b>% Diff</b>, <b>SD A/B</b>, <b>Test size</b>, <b>P-Value</b>, and <b>Significant</b>.</div>
+      </div>
+    </details>
+
+    <!-- How to read results -->
+    <details>
+      <summary>How to read the results <span class='caret'></span></summary>
+      <div class='body'>
+        <ul class='list'>
+          <li><b>Diff (B−A)</b> > 0 means Group B outperforms Group A on that metric; <b>% Diff</b> expresses the relative gap.</li>
+          <li><b>P-Value &amp; Significant</b> indicate if the observed gap is unlikely due to chance (common threshold p &lt; 0.05).</li>
+          <li>Use <b>Promo</b> filtering to isolate the impact of promotions on site performance.</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- Technical note -->
+    <details>
+      <summary>Technical note (Radar chart) <span class='caret'></span></summary>
+      <div class='body'>
+        <p class='sub'>The radar chart uses R. Ensure R is installed and connected to Power BI with packages <b>dplyr</b>, <b>tidyr</b>, <b>fmsb</b>, and <b>gridExtra</b>.</p>
+      </div>
+    </details>
+
+  </div>
+</div>
+"

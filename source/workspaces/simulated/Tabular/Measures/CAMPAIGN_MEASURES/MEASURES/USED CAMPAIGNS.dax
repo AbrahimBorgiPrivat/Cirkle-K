@@ -1,0 +1,1 @@
+CALCULATE(DISTINCTCOUNT(TRANSACTIONSLINES[campaign_transaction_id]))

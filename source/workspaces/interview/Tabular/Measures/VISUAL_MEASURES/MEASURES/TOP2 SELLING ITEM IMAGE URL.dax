@@ -1,0 +1,14 @@
+VAR TopItems =
+    TOPN (
+        2,
+        VALUES ( ITEM_MASTER[item_number] ),
+        [TOTAL_SALE], DESC,
+        ITEM_MASTER[item_number], ASC
+    )
+VAR SecondItem =
+    EXCEPT ( TopItems, TOPN ( 1, TopItems, [TOTAL_SALE], DESC ) )
+RETURN
+    CALCULATE (
+        SELECTEDVALUE ( ITEM_MASTER[img_url] ),
+        SecondItem
+    )

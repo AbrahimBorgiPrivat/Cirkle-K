@@ -1,0 +1,4 @@
+VAR sel_number_of_days = CALCULATE(SELECTEDVALUE('_CUSTOMTALE - DAYNUMBER'[DAYS]))
+VAR revenue = CALCULATE(SUM(TRANSACTIONSLINES[total]),TRANSACTIONS[days_after_signup]<=sel_number_of_days)
+VAR n_cust = CALCULATE(DISTINCTCOUNT(TRANSACTIONS[cust_id]),TRANSACTIONS[days_after_signup]<=sel_number_of_days)
+RETURN DIVIDE(revenue,n_cust,0)

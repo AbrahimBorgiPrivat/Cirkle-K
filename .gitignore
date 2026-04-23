@@ -16,3 +16,7 @@ systemd/pid
 # Ignore editor and session-specific files
 .vscode
 nohup.out
+
+# Ignore local build output for the shared Tabular Editor helper library
+source/workspaces/TabularEditorCLITool/bin/
+source/workspaces/TabularEditorCLITool/obj/

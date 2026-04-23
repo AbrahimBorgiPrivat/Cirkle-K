@@ -1,0 +1,3 @@
+VAR all_cust = CALCULATE(DISTINCTCOUNT(TRANSACTIONS[cust_id]))
+VAR used_camp = CALCULATE(DISTINCTCOUNT(TRANSACTIONS[cust_id]),TRANSACTIONSLINES[campaign_transaction_id]<>BLANK())
+RETURN DIVIDE(used_camp,all_cust,0)

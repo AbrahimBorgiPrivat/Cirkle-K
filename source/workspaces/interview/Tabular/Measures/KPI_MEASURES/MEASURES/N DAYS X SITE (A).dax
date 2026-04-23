@@ -1,0 +1,7 @@
+VAR SiteDays =
+    CALCULATETABLE (
+        SUMMARIZE ( Transactions, TRANSACTIONS[site_number], Transactions[trn_transaction_date] ),
+        ALL ( SITE_MASTER_2 )     -- ignore SiteB; keep SiteA selection
+    )
+RETURN
+    COUNTROWS ( SiteDays )

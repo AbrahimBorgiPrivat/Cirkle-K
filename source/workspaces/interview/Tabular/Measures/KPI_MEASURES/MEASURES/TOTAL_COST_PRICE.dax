@@ -1,0 +1,1 @@
+CALCULATE(SUM(TRANSACTIONS[cost_price]))

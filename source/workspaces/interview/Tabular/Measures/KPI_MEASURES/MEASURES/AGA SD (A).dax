@@ -1,0 +1,1 @@
+CALCULATE ( STDEV.S ( Transactions[gross_amount] ), ALL ( SITE_MASTER_2 ) )

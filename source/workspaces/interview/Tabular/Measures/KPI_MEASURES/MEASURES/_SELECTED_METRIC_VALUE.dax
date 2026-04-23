@@ -1,0 +1,16 @@
+VAR selIndex =
+    SELECTEDVALUE ( '_CUSTOMTABLE - METRICSTABLE'[Index], 1 )   -- default to 1 if nothing is selected
+RETURN
+    SWITCH (
+        selIndex,
+        1, [SALES_MARGIN],
+        2, [TOTAL_SALE],
+        3, [TOTAL_EXPENSE],
+        4, [AVERAGE_GROSS_AMOUNT],
+        5, [NUMBER_OF_TRANSACTIONS],
+        6, [TOTAL_COST_PRICE],
+        7, [AVG_PRICE_PER_UNIT],
+        8, [AVERAGE_NUMBER_OF_UNITS],
+        9, [AVG_COST_PRICE_PER_UNIT],
+        [SALES_MARGIN]   -- fallback if index is outside 1–9
+    )

@@ -1,0 +1,10 @@
+VAR SiteDays =
+    CALCULATETABLE (
+        SUMMARIZE ( Transactions, TRANSACTIONS[site_number], Transactions[trn_transaction_date] ),
+        ALL ( SITE_MASTER )
+    )
+VAR WithTotals =
+    ADDCOLUMNS ( SiteDays, "__v", [TS (B)] )   -- measure respects SiteA, ignores SiteB
+VAR WithNZ = FILTER ( WithTotals, NOT ISBLANK ( [__v] ) )
+RETURN
+    STDEVX.S ( WithNZ, [__v] )

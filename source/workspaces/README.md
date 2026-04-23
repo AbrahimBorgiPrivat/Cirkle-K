@@ -8,11 +8,19 @@ This folder contains the PBIP workspaces for the Circle K interview and simulati
 The interview PBIP project.
 - `simulated`
 The simulation PBIP project.
+- `TabularEditorCLITool`
+Shared C# helper library used by the workspace-local Tabular Editor scripts.
 
 The main entry files are:
 
 - `source/workspaces/interview/Circle K Interview.pbip`
 - `source/workspaces/simulated/Cirkle K Simulated Case.pbip`
+
+Each workspace also contains a `Tabular` folder with:
+
+- `Measures/**/*.dax`
+- one or more `.csx` Tabular Editor scripts
+- `run_tabular_scripts.ps1`
 
 ## Related Assets
 
@@ -33,4 +41,5 @@ This keeps each report workspace separate from reusable images and theme files.
 
 - The interview workspace is meant to be used with data produced by `service_interview_case1`.
 - The simulation workspace is meant to be used with data produced by the JSON and simulation services under `source/code/service`.
+- The shared helper DLL is built from `source/workspaces/TabularEditorCLITool`.
 - The report project lives in source control, while generated data stays outside the PBIP folder.

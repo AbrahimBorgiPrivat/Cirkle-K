@@ -1,0 +1,12 @@
+VAR TopItem =
+    TOPN(
+        1,
+        VALUES( ITEM_MASTER[item_number] ),
+        [TOTAL_SALE], DESC,           -- sort by your measure
+        ITEM_MASTER[item_number], ASC -- tie-breaker (optional)
+    )
+RETURN
+    CALCULATE(
+        SELECTEDVALUE( ITEM_MASTER[img_url] ),
+        TopItem
+    )

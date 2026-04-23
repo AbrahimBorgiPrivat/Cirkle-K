@@ -1,0 +1,4 @@
+VAR min_date = CALCULATE(MIN(DATEVIEW[date_actual]))
+VAR max_date = CALCULATE(MAX(DATEVIEW[date_actual]))
+VAR ret_val = CALCULATE(COUNT(LOYALITY_CUSTOMERS[loyalty_id]),LOYALITY_CUSTOMERS[signup_date]>=min_date && LOYALITY_CUSTOMERS[signup_date]<= max_date)
+RETURN ret_val
