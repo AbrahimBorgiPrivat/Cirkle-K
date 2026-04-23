@@ -1,0 +1,59 @@
+{
+  "name": "CircleKTheme",
+  "dataColors": [
+    "#C8102E",  
+    "#FF8C00",  
+    "#B22222",  
+    "#FFA07A",  
+    "#5A5A5A",  
+    "#E57373",  
+    "#F4A261",  
+    "#BDBDBD"   
+  ],
+  "good": "#4CAF50",
+  "neutral": "#9E9E9E",
+  "bad": "#E53935",
+  "maximum": "#C8102E",
+  "center": "#FF8C00",
+  "minimum": "#BDBDBD",
+  "null": "#F0F0F0",
+  "background": "#FFFFFF",
+  "foreground": "#2D2D2D",
+  "tableAccent": "#C8102E",
+  "textClasses": {
+    "label": {
+      "fontFace": "Segoe UI",
+      "fontSize": 9
+    },
+    "callout": {
+      "fontFace": "Segoe UI",
+      "fontSize": 10
+    },
+    "title": {
+      "fontFace": "Segoe UI",
+      "fontSize": 12
+    },
+    "header": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 10
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "general": [
+          {
+            "border": true,
+            "backgroundColor": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "outlineColor": "#E0E0E0",
+            "outlineWeight": 1
+          }
+        ]
+      }
+    }
+  }
+}

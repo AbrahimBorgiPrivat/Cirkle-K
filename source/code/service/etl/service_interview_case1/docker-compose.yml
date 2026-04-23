@@ -1,0 +1,29 @@
+services:
+  service_interview_case1_circlek:
+    build:
+      context: ../../../../..
+      dockerfile: source/code/service/etl/service_interview_case1/Dockerfile
+    container_name: service_interview_case1_circlek
+    env_file:
+      - .env
+    environment:
+      RUNNER_MODULE: libraries.runners.module_sequence
+      RUNTIME_NAMESPACE: service_interview_case1
+      SERVICE_NAME: service_interview_case1_circlek
+    volumes:
+      - ./app:/app/app
+      - ../../../runtime_definitions/service_interview_case1:/app/runtime_definitions/service_interview_case1
+      - ../../../../../resource/csv:/app/resource/csv
+    networks:
+      - data_network
+    command: ["poetry", "run", "python", "app/main.py"]
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 1
+        window: 30s
+
+networks:
+  data_network:
+    external: true

@@ -1,0 +1,292 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "f90e59409b612d68fe38",
+  "position": {
+    "x": 240,
+    "y": 110,
+    "z": 6000,
+    "height": 290,
+    "width": 800,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "scriptVisual",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "SM (A)"
+                }
+              },
+              "queryRef": "_MEASURES.SM (A)",
+              "nativeQueryRef": "SM (A)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "SM (B)"
+                }
+              },
+              "queryRef": "_MEASURES.SM (B)",
+              "nativeQueryRef": "SM (B)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "TS (A)"
+                }
+              },
+              "queryRef": "_MEASURES.TS (A)",
+              "nativeQueryRef": "TS (A)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "TS (B)"
+                }
+              },
+              "queryRef": "_MEASURES.TS (B)",
+              "nativeQueryRef": "TS (B)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "NT (A)"
+                }
+              },
+              "queryRef": "_MEASURES.NT (A)",
+              "nativeQueryRef": "NT (A)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "NT (B)"
+                }
+              },
+              "queryRef": "_MEASURES.NT (B)",
+              "nativeQueryRef": "NT (B)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "AGA Mean (A)"
+                }
+              },
+              "queryRef": "_MEASURES.AGA Mean (A)",
+              "nativeQueryRef": "AGA Mean (A)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "AGA Mean (B)"
+                }
+              },
+              "queryRef": "_MEASURES.AGA Mean (B)",
+              "nativeQueryRef": "AGA Mean (B)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "NU Mean (A)"
+                }
+              },
+              "queryRef": "_MEASURES.NU Mean (A)",
+              "nativeQueryRef": "NU Mean (A)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "NU Mean (B)"
+                }
+              },
+              "queryRef": "_MEASURES.NU Mean (B)",
+              "nativeQueryRef": "NU Mean (B)"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_MEASURES"
+                  }
+                },
+                "Property": "SM (A)"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "script": [
+        {
+          "properties": {
+            "source": {
+              "expr": {
+                "Literal": {
+                  "Value": "'# Den følgende kode til at oprette en dataframe og fjerne dublerede rækker udføres altid og fungerer som en indledning til dit script: \n\n# dataset <- data.frame(SM (A), SM (B), TS (A), TS (B), NT (A), NT (B),AGA Mean (A),AGA Mean (B), NU Mean (A), NU Mean (B) )\n# dataset <- unique(dataset)\n\n# Indsæt eller skriv din scriptkode her:\n\nsuppressWarnings({ library(grid); library(fmsb) })  \n\nhas_fmsb <- requireNamespace(\"fmsb\", quietly = TRUE)\n\ngetv <- function(nm) if (nm %in% names(dataset)) as.numeric(dataset[[nm]][1]) else NA_real_\nA_SM  <- getv(\"SM (A)\");   B_SM  <- getv(\"SM (B)\")\nA_TS  <- getv(\"TS (A)\");   B_TS  <- getv(\"TS (B)\")\nA_NT  <- getv(\"NT (A)\");   B_NT  <- getv(\"NT (B)\")\nA_AGA <- getv(\"AGA Mean (A)\");  B_AGA <- getv(\"AGA Mean (B)\")\nA_NU  <- getv(\"NU Mean (A)\");   B_NU  <- getv(\"NU Mean (B)\")\n\n# Category order\ncats <- c(\"Sales margin\", \"Total sales\", \"No. transactions\", \"Avg. gross amount\", \"Avg. units\")\nA <- c(A_SM, A_TS, A_NT, A_AGA, A_NU)\nB <- c(B_SM, B_TS, B_NT, B_AGA, B_NU)\n\n# Replace negative/NA with 0 for scaling robustness\nA[!is.finite(A) | A < 0] <- 0\nB[!is.finite(B) | B < 0] <- 0\n\n# Axis limits per metric: 0 .. max(A,B) * 1.05 (small headroom)\nmx <- pmax(A, B)\nmx[mx == 0] <- 1  # avoid zero-span axes\n\n# Circle K palette\ncolA_line <- \"#C8102E\"  # red\ncolB_line <- \"#FF8C00\"  # orange\nfillA <- grDevices::rgb(200,16,46, maxColorValue=255, alpha=45)\nfillB <- grDevices::rgb(255,140,0,  maxColorValue=255, alpha=45)\ngrid_col  <- \"#E0E0E0\"\nlabel_col <- \"#2D2D2D\"\n\ndf <- rbind(mx, rep(0, length(mx)), A, B)\ndf <- as.data.frame(df); colnames(df) <- cats; rownames(df) <- c(\"Max\",\"Min\",\"A\",\"B\")\n\npar(family = \"Segoe UI\", mar = c(0,0,2,0))   \nradarchart(df,\n            pcol  = c(colA_line, colB_line),\n            pfcol = c(fillA, fillB),\n            plwd  = 2, plty = 1,\n            cglcol = grid_col, cglty = 1, cglwd = 1,\n            axislabcol = label_col,\n            caxislabels = c(\"0%\", \"50%\", \"100%\"),\n            vlcex = 1.2)\n\nlegend(\"topleft\", inset = 0.02,\n        legend = c(\"Group A\",\"Group B\"),\n        col = c(colA_line, colB_line), lty = 1, lwd = 2, bty = \"n\", cex = 0.9)\n'"
+                }
+              }
+            },
+            "provider": {
+              "expr": {
+                "Literal": {
+                  "Value": "'R'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Light'', wf_segoe-ui_light, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'COMPARE SITE A / B'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

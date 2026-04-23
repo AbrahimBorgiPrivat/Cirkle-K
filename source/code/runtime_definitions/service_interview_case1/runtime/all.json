@@ -1,0 +1,32 @@
+{
+  "modules": [
+    {
+      "name": "Upsert Interview Item Master",
+      "module": "libraries.scripts.upserts.interview_item_master",
+      "kwargs": {
+        "create_table_if_not_exist": true
+      }
+    },
+    {
+      "name": "Upsert Interview Item Images",
+      "module": "libraries.scripts.upserts.interview_item_images",
+      "kwargs": {
+        "create_table_if_not_exist": true
+      }
+    },
+    {
+      "name": "Upsert Interview Site Master",
+      "module": "libraries.scripts.upserts.interview_site_master",
+      "kwargs": {
+        "create_table_if_not_exist": true
+      }
+    },
+    {
+      "name": "Upsert Interview Transactions",
+      "module": "libraries.scripts.upserts.interview_transactions",
+      "kwargs": {
+        "create_table_if_not_exist": true
+      }
+    }
+  ]
+}

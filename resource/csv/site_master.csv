@@ -1,0 +1,6 @@
+site_number;site_name;site_city;site_postal_code;site_region;site_brand;site_format
+210240;Station1;City1;4000;Denmark West;Circle K;Full Service Station
+210870;Station2;City1;4000;Denmark West;Circle K;Full Service Station
+210845;Station3;City2;5000;Denmark West;Circle K;Full Service Station
+210350;Station4;City3;6000;Denmark East;Circle K;Full Service Station
+210929;Station5;City4;7000;Denmark East;Circle K;Full Service Station

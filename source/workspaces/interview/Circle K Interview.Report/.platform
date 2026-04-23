@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Circle K Interview"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "023025bf-04ab-42e3-a790-678951b5f08f"
+  }
+}

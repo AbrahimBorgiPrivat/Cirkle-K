@@ -14,6 +14,9 @@ RUNTIME_DIR = CODE_DIR / 'runtime_definitions'
 # Path to files folder
 FILES_DIR = BASE_DIR / 'resource'
 
+# Path to CSV files
+CSV_DIR = FILES_DIR / 'csv'
+
 # Path to JSON files
 JSON_DIR = FILES_DIR / 'json'
 DATAFORDELER_JSON_DIR = JSON_DIR / 'datafordeler'

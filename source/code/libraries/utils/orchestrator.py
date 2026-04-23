@@ -1,6 +1,7 @@
 import json
 import logging
 import os
+import csv
 import pandas as pd
 import time
 import threading
@@ -9,6 +10,7 @@ import numpy as np
 
 from tqdm import tqdm
 from datetime import datetime, timedelta, date, time
+from pathlib import Path
 from libraries.utils import env
 from sqlalchemy import MetaData, text, Table, Column
 from sqlalchemy.exc import OperationalError, TimeoutError, NoSuchTableError
@@ -53,6 +55,32 @@ def load_json_file(folder_path:str,
     except Exception as e:
         logger.exception("Error loading JSON file: %s", e)
         return []
+
+
+def load_csvs_as_dicts(
+    file_paths: list[str | os.PathLike[str]],
+    delimiter: str = ",",
+    with_id: bool = False,
+) -> list[dict]:
+    rows: list[dict] = []
+    counter = 1
+
+    for file_path in file_paths:
+        file = Path(file_path)
+        if not file.exists():
+            logger.warning("CSV file not found: %s", file)
+            continue
+
+        with file.open(mode="r", encoding="utf-8-sig", newline="") as handle:
+            reader = csv.DictReader(handle, delimiter=delimiter)
+            for row in reader:
+                if with_id:
+                    row = {"id": counter, **row}
+                    counter += 1
+                rows.append(row)
+
+    logger.info("Loaded %s row(s) from %s CSV file(s).", len(rows), len(file_paths))
+    return rows
 
 """
 Transforms a list of dictionaries by selecting and renaming keys, 

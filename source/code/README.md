@@ -7,6 +7,7 @@ This folder contains the Python package, runtime definitions, and Docker service
 ```text
 source/code/
 |-- libraries/
+|   |-- R/
 |   |-- classes/
 |   |-- runners/
 |   |-- scripts/
@@ -23,11 +24,20 @@ source/code/
 ## Main Concepts
 
 - `libraries`
-Reusable Python modules used by every service.
+Reusable Python and R modules used by every service and analysis workflow.
 - `runtime_definitions`
 JSON-driven service configuration and SQL assets. The services read these files to decide what to run.
 - `service`
-Docker entrypoints for database, download, load, and simulation jobs.
+Docker entrypoints for database, download, CSV load, JSON load, and simulation jobs.
+
+## Case-Specific Assets
+
+- `libraries/scripts/upserts/interview_*`
+CSV upserts for the interview case tables in the `interview` schema.
+- `libraries/scripts/pipelines/interview_case1.py`
+Local convenience pipeline for the interview CSV upserts.
+- `libraries/R/case2.R`
+R solution for interview case 2.
 
 ## JSON Layout
 
@@ -37,6 +47,11 @@ Shared JSON assets are split by purpose:
 Downloaded DAR and DAGI source files.
 - `resource/json/circlek`
 Static Circle K seed files used by the simulation pipeline.
+
+## CSV Layout
+
+- `resource/csv`
+Interview CSV files used by `service_interview_case1`.
 
 ## Local Poetry Setup
 
@@ -75,3 +90,5 @@ Each service starts `app/main.py`, which then:
 3. executes the configured modules through a runner in `libraries.runners`
 
 For one-shot ETL jobs, `Exited (0)` means the service completed successfully.
+
+The interview CSV load is handled by `service/etl/service_interview_case1`, which mounts `resource/csv` at runtime to keep image builds small.

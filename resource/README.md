@@ -4,10 +4,31 @@ This folder contains shared runtime assets used by both the Python services and 
 
 ## Contents
 
+- `csv`
+Interview CSV files used by the case 1 ETL service.
 - `json`
 Downloaded source files and static seed files used by the ETL and simulation services.
 - `powerbi`
-Theme file and image assets used by the PBIP workspace.
+Theme files and image assets used by the PBIP workspaces.
+
+## `csv`
+
+This folder contains the interview case source files:
+
+- `date_dim.csv`
+- `item_images.csv`
+- `item_master.csv`
+- `site_master.csv`
+- `transactions2017.csv`
+- `transactions2018.csv`
+
+To load these files into PostgreSQL, run:
+
+```powershell
+docker compose -f source\code\service\etl\service_interview_case1\docker-compose.yml up --build
+```
+
+The service mounts `resource/csv` into the container, which keeps the Docker build context small.
 
 ## `json`
 
@@ -28,9 +49,9 @@ The download service writes into `resource/json/datafordeler` through a mounted 
 
 ## `powerbi`
 
-This folder contains shared Power BI assets:
+This folder contains shared Power BI assets split by case:
 
-- `CirkleKPBITheme.json`
-- `Images/*`
+- `powerbi/interview`
+- `powerbi/simulation`
 
-These files are referenced by the report workspace in `source/workspaces/pbip`.
+These files are referenced by the workspaces in `source/workspaces/interview` and `source/workspaces/simulated`.

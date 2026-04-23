@@ -1,0 +1,488 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "eece30b4b37db96cf0ce",
+  "position": {
+    "x": 20,
+    "y": 410,
+    "z": 0,
+    "height": 300,
+    "width": 1240,
+    "tabOrder": 9000
+  },
+  "visual": {
+    "visualType": "scriptVisual",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "N DAYS X SITE (A)"
+                }
+              },
+              "queryRef": "SiteA.N DAYS (A, active)",
+              "nativeQueryRef": "N DAYS X SITE (A)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "N DAYS X SITE (B)"
+                }
+              },
+              "queryRef": "SiteA.N DAYS (B, active)",
+              "nativeQueryRef": "N DAYS X SITE (B)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "N (A)"
+                }
+              },
+              "queryRef": "SiteA.ATP N (A)",
+              "nativeQueryRef": "N (A)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "N (B)"
+                }
+              },
+              "queryRef": "SiteA.ATP N (B)",
+              "nativeQueryRef": "N (B)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "TS (A)"
+                }
+              },
+              "queryRef": "SiteA.TOTAL SALE (A)",
+              "nativeQueryRef": "TS (A)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "TS (B)"
+                }
+              },
+              "queryRef": "SiteA.TOTAL SALE (B)",
+              "nativeQueryRef": "TS (B)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "TS MEAN (A)"
+                }
+              },
+              "queryRef": "SiteA.MEAN DAILY TOTAL (A, active)",
+              "nativeQueryRef": "TS MEAN (A)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "TS MEAN (B)"
+                }
+              },
+              "queryRef": "SiteA.MEAN DAILY TOTAL (B, active)",
+              "nativeQueryRef": "TS MEAN (B)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "TS SD (A)"
+                }
+              },
+              "queryRef": "SiteA.SD DAILY TOTAL (A)",
+              "nativeQueryRef": "TS SD (A)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "TS SD (B)"
+                }
+              },
+              "queryRef": "SiteA.SD DAILY TOTAL (B)",
+              "nativeQueryRef": "TS SD (B)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "AGA Mean (A)"
+                }
+              },
+              "queryRef": "SiteA.ATP Mean (A)",
+              "nativeQueryRef": "AGA Mean (A)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "AGA Mean (B)"
+                }
+              },
+              "queryRef": "SiteA.ATP Mean (B)",
+              "nativeQueryRef": "AGA Mean (B)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "AGA SD (A)"
+                }
+              },
+              "queryRef": "SiteA.ATP SD (A)",
+              "nativeQueryRef": "AGA SD (A)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "AGA SD (B)"
+                }
+              },
+              "queryRef": "SiteA.ATP SD (B)",
+              "nativeQueryRef": "AGA SD (B)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "SM (A)"
+                }
+              },
+              "queryRef": "SiteA.SM (A)",
+              "nativeQueryRef": "SM (A)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "SM (B)"
+                }
+              },
+              "queryRef": "SiteA.SM (B)",
+              "nativeQueryRef": "SM (B)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "SM MEAN (A)"
+                }
+              },
+              "queryRef": "SiteA.SM MEAN (A)",
+              "nativeQueryRef": "SM MEAN (A)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "SM MEAN (B)"
+                }
+              },
+              "queryRef": "SiteA.SM MEAN (B)",
+              "nativeQueryRef": "SM MEAN (B)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "SM SD (A)"
+                }
+              },
+              "queryRef": "SiteA.SM SD (A)",
+              "nativeQueryRef": "SM SD (A)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "SM SD (B)"
+                }
+              },
+              "queryRef": "SiteA.SM SD (B)",
+              "nativeQueryRef": "SM SD (B)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "NU Mean (A)"
+                }
+              },
+              "queryRef": "_MEASURES.NU Mean (A)",
+              "nativeQueryRef": "NU Mean (A)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "NU Mean (B)"
+                }
+              },
+              "queryRef": "_MEASURES.NU Mean (B)",
+              "nativeQueryRef": "NU Mean (B)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "NU SD (A)"
+                }
+              },
+              "queryRef": "_MEASURES.NU SD (A)",
+              "nativeQueryRef": "NU SD (A)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MEASURES"
+                    }
+                  },
+                  "Property": "NU SD (B)"
+                }
+              },
+              "queryRef": "_MEASURES.NU SD (B)",
+              "nativeQueryRef": "NU SD (B)"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_MEASURES"
+                  }
+                },
+                "Property": "N DAYS X SITE (A)"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "script": [
+        {
+          "properties": {
+            "source": {
+              "expr": {
+                "Literal": {
+                  "Value": "'# Den følgende kode til at oprette en dataframe og fjerne dublerede rækker udføres altid og fungerer som en indledning til dit script: \n\n# dataset <- data.frame(N DAYS X SITE (A), N DAYS X SITE (B), N (A), N (B), \n#                       TS (A), TS (B), TS MEAN (A), TS MEAN (B), TS SD (A), TS SD (B),\n#                       AGA Mean (A), AGA Mean (B), AGA SD (A), AGA SD (B),\n#                       SM (A), SM (B), SM MEAN (A), SM MEAN (B),SM SD (A), SM SD (B),\n#                       NU Mean (A), NU Mean (B),NU SD (A), NU SD (B))\n# dataset <- unique(dataset)\n\n# Indsæt eller skriv din scriptkode her:\n\n# ---- packages ----\nsuppressWarnings({ library(grid); library(gridExtra) })\n\n# ---- helpers ----\ngetv <- function(nm) {\n  if (nm %in% names(dataset)) as.numeric(dataset[[nm]][1]) else NA_real_\n}\nfmt_cur <- function(x) {if (is.na(x)) {\"\"} else {paste0(format(round(x, 2), big.mark = \",\"), \" kr.\")}}\nfmt_num <- function(x) ifelse(is.na(x), \"\", format(round(x, 2), big.mark = \",\"))\nfmt_pct <- function(x) ifelse(is.na(x), \"\", paste0(round(x * 100, 1), \"%\"))\nfmt_p   <- function(p) ifelse(is.na(p), \"\", ifelse(p < 0.001, \"<0.001\", sprintf(\"%.3f\", p)))\n\n\n# ---- Welch t-test function ----\nwelch_test <- function(meanA, sdA, nA, meanB, sdB, nB) {\n  se    <- sqrt((sdA^2 / nA) + (sdB^2 / nB))\n  tstat <- (meanB - meanA) / se\n  df    <- ((sdA^2/nA + sdB^2/nB)^2) / (((sdA^2/nA)^2)/(nA-1) + ((sdB^2/nB)^2)/(nB-1))\n  pval  <- 2 * pt(-abs(tstat), df)\n  if (!is.finite(tstat)) tstat <- NA_real_\n  if (!is.finite(df))    df    <- NA_real_\n  if (!is.finite(pval))  pval  <- NA_real_\n  list(t=tstat, df=df, p=pval)\n}\n\n# Generic row builder (Welch test + formatting)\nwelch_row <- function(metric,\n                      meanA, sdA, nA,\n                      meanB, sdB, nB,\n                      totalA = NA_real_, totalB = NA_real_,\n                      currency_means = TRUE) {\n\n  # Welch from summary stats\n  se    <- sqrt((sdA^2 / nA) + (sdB^2 / nB))\n  tstat <- (meanB - meanA) / se\n  df    <- ((sdA^2/nA + sdB^2/nB)^2) /\n           (((sdA^2/nA)^2)/(nA-1) + ((sdB^2/nB)^2)/(nB-1))\n  pval  <- 2 * pt(-abs(tstat), df)\n\n  if (!is.finite(tstat)) tstat <- NA_real_\n  if (!is.finite(df))    df    <- NA_real_\n  if (!is.finite(pval))  pval  <- NA_real_\n\n  # choose formatter for means/diff depending on metric\n  f_mean <- if (currency_means) fmt_cur else fmt_num\n\n  diff <- meanB - meanA\n  pct  <- ifelse(is.na(meanA) || meanA == 0, NA_real_, diff/meanA)\n\n  data.frame(\n    Metric       = metric,\n    `Total A`    = if (is.na(totalA)) \"\" else f_mean(totalA),\n    `Total B`    = if (is.na(totalB)) \"\" else f_mean(totalB),\n    `Mean A`     = f_mean(meanA),\n    `Mean B`     = f_mean(meanB),\n    `Diff (B–A)` = f_mean(diff),\n    `% Diff`     = fmt_pct(pct),\n    `SD A`       = fmt_num(sdA),\n    `SD B`       = fmt_num(sdB),\n    `Test size`  = ifelse(is.na(tstat), \"\", sprintf(\"%.2f\", tstat)),\n    `P Value`    = fmt_p(pval),\n    Significant  = ifelse(!is.na(pval) & pval < 0.05, \"Yes\", \"No\"),\n    check.names  = FALSE\n  )\n}\n\n# ---- read measures from PBI ----\n\n## Number of days x site\nnA_days    <- getv(\"N DAYS X SITE (A)\")\nnB_days    <- getv(\"N DAYS X SITE (B)\")\nnA    <- getv(\"N (A)\")\nnB    <- getv(\"N (B)\")\n\n# ---- Sales Margin per day row ----\n\nA_sm  <- getv(\"SM (A)\")\nB_sm  <- getv(\"SM (B)\")\nmeanA_sm <- getv(\"SM MEAN (A)\")\nmeanB_sm <- getv(\"SM MEAN (B)\")\nsdA_sm   <- getv(\"SM SD (A)\")\nsdB_sm   <- getv(\"SM SD (B)\")\n\nrow1 <- welch_row(\n  metric = \"Sales margin per day x site\",\n  meanA = meanA_sm, sdA = sdA_sm, nA = nA_days,\n  meanB = meanB_sm, sdB = sdB_sm, nB = nB_days,\n  totalA = A_sm, totalB = B_sm,\n  currency_means = TRUE\n)\n\n# ---- Total sale per day row ----\n\nA_ts  <- getv(\"TS (A)\")\nB_ts  <- getv(\"TS (B)\")\nmeanA_ts <- getv(\"TS MEAN (A)\")\nmeanB_ts <- getv(\"TS MEAN (B)\")\nsdA_ts   <- getv(\"TS SD (A)\")\nsdB_ts   <- getv(\"TS SD (B)\")\n\nrow2 <- welch_row(\n  metric = \"Total sale per day x site\",\n  meanA = meanA_ts, sdA = sdA_ts, nA = nA_days,\n  meanB = meanB_ts, sdB = sdB_ts, nB = nB_days,\n  totalA = A_ts, totalB = B_ts,\n  currency_means = TRUE\n)\n\n# ---- Avg. gross amount row ----\n\nmeanA_AGA <- getv(\"AGA Mean (A)\")\nmeanB_AGA <- getv(\"AGA Mean (B)\")\nsdA_AGA   <- getv(\"AGA SD (A)\")\nsdB_AGA   <- getv(\"AGA SD (B)\")\n\nrow3 <- welch_row(\n  metric = \"Average gross amount\",\n  meanA = meanA_AGA, sdA = sdA_AGA, nA = nA,\n  meanB = meanB_AGA, sdB = sdB_AGA, nB = nB,\n  totalA = NA, totalB = NA,\n  currency_means = TRUE\n)\n\n\n# ---- AVERAGE NUMBER OF UNITS per transaction ----\n\nmeanA_NU <- getv(\"NU Mean (A)\")\nmeanB_NU <- getv(\"NU Mean (B)\")\nsdA_NU   <- getv(\"NU SD (A)\")\nsdB_NU   <- getv(\"NU SD (B)\")\n\nrow4 <- welch_row(\n  metric = \"Average number of units per trans.\",\n  meanA = meanA_NU, sdA = sdA_NU, nA = nB,   # <- use your transaction-level Ns\n  meanB = meanB_NU, sdB = sdB_NU, nB = nB,\n  totalA = NA, totalB = NA,\n  currency_means = FALSE     # not a currency metric\n)\n\n# ---- combine ----\ntbl <- rbind(row1, row2, row3, row4)\n\n# wrapping helper ---\nwrap <- function(x, width = 14) {\n  if (is.null(x)) return(x)\n  vapply(as.character(x), function(s) paste(strwrap(s, width = width), collapse = \"\\n\"), \"\")\n}\n\n# wrap header names\ncolnames(tbl) <- wrap(colnames(tbl), width = 10)\n\n# wrap metric labels\ntbl$Metric <- wrap(tbl$Metric, width = 18)\n\n# Circle K theme colors\ncol_header_bg <- \"#C8102E\"   # accent red\ncol_header_fg <- \"#FFFFFF\"   # white text\ncol_body_bg   <- \"#FFFFFF\"   # white\ncol_body_fg   <- \"#2D2D2D\"   # dark grey text\ncol_grid      <- \"#2D2D2D\"   # outline\n\n# Theme with Circle K look\ntheme_circlek <- ttheme_default(\n  core = list(\n    fg_params = list(cex = 0.85, fontfamily = \"Segoe UI\", col = col_body_fg),\n    bg_params = list(fill = col_body_bg, col = col_grid, lwd = 0.5)\n  ),\n  colhead = list(\n    fg_params = list(cex = 0.9, fontfamily = \"Segoe UI Semibold\", col = col_header_fg),\n    bg_params = list(fill = col_header_bg, col = col_grid, lwd = 0.5)\n  )\n)\n\n# Build grob\ntbl <- tableGrob(tbl, rows = NULL, theme = theme_circlek)\n\n# Stretch table to fill the visual\nnr <- nrow(tbl$heights)\nnc <- ncol(tbl$widths)\ntbl$widths  <- unit(rep(1/ncol(tbl), ncol(tbl)), \"npc\")\ntbl$heights <- unit(rep(1/nrow(tbl), nrow(tbl)), \"npc\")\n\n# Draw\ngrid.newpage()\ngrid.draw(tbl)\n'"
+                }
+              }
+            },
+            "provider": {
+              "expr": {
+                "Literal": {
+                  "Value": "'R'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Light'', wf_segoe-ui_light, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

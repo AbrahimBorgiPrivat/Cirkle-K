@@ -13,7 +13,7 @@ Convenience orchestration scripts for local/manual runs.
 - `simulations`
 Data generation logic used by the simulation upserts.
 - `upserts`
-Modules that create or update database tables from JSON files or generated data.
+Modules that create or update database tables from JSON files, CSV files, or generated data.
 
 ## Runtime-Driven Execution
 
@@ -35,8 +35,21 @@ Examples:
 cd source\code
 poetry run python libraries\scripts\pipelines\datafordeler_main.py
 poetry run python libraries\scripts\pipelines\cirkleKsimulations.py
+poetry run python libraries\scripts\pipelines\interview_case1.py
 ```
 
 ## Logging
 
 Scripts now use Python `logging`, so their progress appears in Docker logs without relying on `print`.
+
+## Interview Case
+
+The interview case adds:
+
+- `upserts/interview_item_master.py`
+- `upserts/interview_item_images.py`
+- `upserts/interview_site_master.py`
+- `upserts/interview_transactions.py`
+- `pipelines/interview_case1.py`
+
+These modules read from `resource/csv` and load the `interview` schema.

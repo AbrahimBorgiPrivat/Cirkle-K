@@ -1,0 +1,172 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.0.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY24SU10",
+      "reportVersionAtImport": {
+        "visual": "1.8.95",
+        "report": "2.0.95",
+        "page": "1.3.95"
+      },
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "CircleKTheme3352763781410246.json",
+      "reportVersionAtImport": {
+        "visual": "2.1.0",
+        "report": "2.1.0",
+        "page": "2.0.0"
+      },
+      "type": "RegisteredResources"
+    }
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "publicCustomVisuals": [
+    "RadarChart1446119667547",
+    "htmlContent443BE3AD55E043BF878BED274D3A6855"
+  ],
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY24SU10",
+          "path": "BaseThemes/CY24SU10.json",
+          "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "CircleKTheme3352763781410246.json",
+          "path": "CircleKTheme3352763781410246.json",
+          "type": "CustomTheme"
+        },
+        {
+          "name": "Background0586212265681576.png",
+          "path": "Background0586212265681576.png",
+          "type": "Image"
+        },
+        {
+          "name": "shop9059439674825992.png",
+          "path": "shop9059439674825992.png",
+          "type": "Image"
+        },
+        {
+          "name": "Money08466669491774659.png",
+          "path": "Money08466669491774659.png",
+          "type": "Image"
+        },
+        {
+          "name": "Number_of_transactions9684587652306342.png",
+          "path": "Number_of_transactions9684587652306342.png",
+          "type": "Image"
+        },
+        {
+          "name": "Sales_Margin11702668699176866.png",
+          "path": "Sales_Margin11702668699176866.png",
+          "type": "Image"
+        },
+        {
+          "name": "Background7673819971054447.png",
+          "path": "Background7673819971054447.png",
+          "type": "Image"
+        },
+        {
+          "name": "Sales_Margin17789238256750073.png",
+          "path": "Sales_Margin17789238256750073.png",
+          "type": "Image"
+        },
+        {
+          "name": "Total_Sale7077002629179928.png",
+          "path": "Total_Sale7077002629179928.png",
+          "type": "Image"
+        },
+        {
+          "name": "TOTAL_EXPENSE056447429220335965.png",
+          "path": "TOTAL_EXPENSE056447429220335965.png",
+          "type": "Image"
+        },
+        {
+          "name": "AVERAGE_TRANSACTION9500283297187095.png",
+          "path": "AVERAGE_TRANSACTION9500283297187095.png",
+          "type": "Image"
+        },
+        {
+          "name": "NUMBER_OF_TRANSACTION8128611399823836.png",
+          "path": "NUMBER_OF_TRANSACTION8128611399823836.png",
+          "type": "Image"
+        },
+        {
+          "name": "TOTAL_Cost_Price4154298183291574.png",
+          "path": "TOTAL_Cost_Price4154298183291574.png",
+          "type": "Image"
+        },
+        {
+          "name": "Total_VAT19908990484808742.png",
+          "path": "Total_VAT19908990484808742.png",
+          "type": "Image"
+        },
+        {
+          "name": "AVG_Price_per_Unit8816817022605206.png",
+          "path": "AVG_Price_per_Unit8816817022605206.png",
+          "type": "Image"
+        },
+        {
+          "name": "AVG_NUMBER_OF_UNITS30110011616801824.png",
+          "path": "AVG_NUMBER_OF_UNITS30110011616801824.png",
+          "type": "Image"
+        },
+        {
+          "name": "AVG_NUMBER_OF_UNITS2561900708313145.png",
+          "path": "AVG_NUMBER_OF_UNITS2561900708313145.png",
+          "type": "Image"
+        },
+        {
+          "name": "AVG_COST_PER_UNIT26568105877023285.png",
+          "path": "AVG_COST_PER_UNIT26568105877023285.png",
+          "type": "Image"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarized",
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true,
+    "useDefaultAggregateDisplayName": true
+  }
+}
