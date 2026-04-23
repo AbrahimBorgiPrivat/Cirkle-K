@@ -2,7 +2,7 @@ from libraries.utils.orchestrator import update_insert_dw, ensure_table_structur
 from libraries.utils.db_types import TEXT, BOOLEAN, BIGINT, TIMESTAMP
 from libraries.scripts.simulations import loyality_customer_cards
 
-def upsert(create_table_if_not_exist=False, n_simulations = 10000):
+def upsert(create_table_if_not_exist=False, n_simulations = 1000):
     customers, cards =loyality_customer_cards.main(num_customers=n_simulations)
     db_name='circlek'
     schema_name='public'
