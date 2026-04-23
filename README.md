@@ -1,5 +1,7 @@
 # Circle K Data & Analytics Cases
 
+Live site: https://abrahimborgiprivat.github.io/Cirkle-K/html/index.html
+
 This repository contains two linked Circle K cases:
 
 - `Interview case`
