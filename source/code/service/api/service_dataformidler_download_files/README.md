@@ -1,6 +1,6 @@
 # `service_dataformidler_download_files`
 
-This one-shot service downloads DAR and DAGI files from Datafordeler and writes them to `resource/json`.
+This one-shot service downloads DAR and DAGI files from Datafordeler and writes them to `resource/json/datafordeler`.
 
 ## Runtime
 
@@ -32,7 +32,7 @@ docker compose -f source\code\service\api\service_dataformidler_download_files\d
 
 Downloaded and extracted files are written under:
 
-- `resource/json`
+- `resource/json/datafordeler`
 
 ## Notes
 

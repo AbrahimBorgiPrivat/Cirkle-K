@@ -15,4 +15,6 @@ RUNTIME_DIR = CODE_DIR / 'runtime_definitions'
 FILES_DIR = BASE_DIR / 'resource'
 
 # Path to JSON files
-JSON_DIR = BASE_DIR / 'resource' / 'json'
+JSON_DIR = FILES_DIR / 'json'
+DATAFORDELER_JSON_DIR = JSON_DIR / 'datafordeler'
+CIRCLEK_JSON_DIR = JSON_DIR / 'circlek'

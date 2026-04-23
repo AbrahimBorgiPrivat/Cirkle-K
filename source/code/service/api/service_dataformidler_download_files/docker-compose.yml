@@ -14,7 +14,7 @@ services:
     volumes:
       - ./app:/app/app
       - ../../../runtime_definitions/service_dataformidler_download_files:/app/runtime_definitions/service_dataformidler_download_files
-      - ../../../../../resource:/app/resource
+      - ../../../../../resource/json/datafordeler:/app/resource/json/datafordeler
     command: ["poetry", "run", "python", "app/main.py"]
     deploy:
       restart_policy:

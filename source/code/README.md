@@ -29,6 +29,15 @@ JSON-driven service configuration and SQL assets. The services read these files 
 - `service`
 Docker entrypoints for database, download, load, and simulation jobs.
 
+## JSON Layout
+
+Shared JSON assets are split by purpose:
+
+- `resource/json/datafordeler`
+Downloaded DAR and DAGI source files.
+- `resource/json/circlek`
+Static Circle K seed files used by the simulation pipeline.
+
 ## Local Poetry Setup
 
 From `source/code`:

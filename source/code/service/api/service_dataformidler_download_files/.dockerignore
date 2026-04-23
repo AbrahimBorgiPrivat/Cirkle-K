@@ -1,1 +1,5 @@
 __pycache__/
+source/code/.venv/
+resource/
+source/workspaces/
+.git/

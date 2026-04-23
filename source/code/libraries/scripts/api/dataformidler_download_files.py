@@ -1,5 +1,6 @@
 import logging
 import os
+from pathlib import Path
 import requests
 import zipfile
 from tqdm import tqdm
@@ -8,7 +9,7 @@ from libraries.utils.env import (
     DATAFORDELER_USER,
     require_datafordeler_env,
 )
-from libraries.utils.path_config import FILES_DIR
+from libraries.utils.path_config import DATAFORDELER_JSON_DIR
 
 logger = logging.getLogger(__name__)
 
@@ -31,8 +32,9 @@ def get_api(LatestTotalForEntity: str,
 def download_and_unzip(LatestTotalForEntity: str,
                        register: str,
                        type: str, 
-                       save_directory: str):
+                       save_directory: str | Path):
     try:
+        save_directory = os.fspath(save_directory)
         os.makedirs(save_directory, exist_ok=True)
         zip_filename = f"{register}_{LatestTotalForEntity}_{type}"
         zip_path = os.path.join(save_directory, zip_filename)
@@ -86,10 +88,10 @@ def download_files(output_dir: str):
         download_and_unzip(LatestTotalForEntity=filename['LatestTotalForEntity'],
                             register=filename['register'],
                             type=filename['type'],
-                            save_directory=os.path.join(output_dir, "json"))    
+                            save_directory=output_dir)
     return Number_of_tables
 
-def main(output_dir: str = FILES_DIR):
+def main(output_dir: str | Path = DATAFORDELER_JSON_DIR):
     return download_files(output_dir)
 
 if __name__ == "__main__":

@@ -21,6 +21,5 @@ RUN poetry install --only main --no-root --no-ansi
 COPY source/code/service/etl/service_simulation/app ./app
 COPY source/code/libraries ./libraries
 COPY source/code/runtime_definitions/service_simulation ./runtime_definitions/service_simulation
-COPY resource ./resource
 
 CMD ["poetry", "run", "python", "app/main.py"]

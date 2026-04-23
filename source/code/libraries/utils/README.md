@@ -7,7 +7,7 @@ This package contains shared helpers used across all services.
 - `env.py`
 Loads environment variables and validates required PostgreSQL and Datafordeler settings.
 - `path_config.py`
-Resolves shared paths such as `resource/json`, `resource`, and `runtime_definitions`. The path logic supports both repo execution and Docker execution under `/app`.
+Resolves shared paths such as `resource/json/datafordeler`, `resource/json/circlek`, `resource`, and `runtime_definitions`. The path logic supports both repo execution and Docker execution under `/app`.
 - `runtime.py`
 Loads runtime JSON files and resolves environment-backed values.
 - `orchestrator.py`

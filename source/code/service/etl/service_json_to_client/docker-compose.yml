@@ -13,7 +13,7 @@ services:
     volumes:
       - ./app:/app/app
       - ../../../runtime_definitions/service_json_to_client:/app/runtime_definitions/service_json_to_client
-      - ../../../../../resource:/app/resource
+      - ../../../../../resource/json/datafordeler:/app/resource/json/datafordeler
     networks:
       - data_network
     command: ["poetry", "run", "python", "app/main.py"]

@@ -22,7 +22,7 @@ The runtime executes these steps:
 
 ## Inputs
 
-The service relies on seed files in `resource/json`, including:
+The service relies on seed files in `resource/json/circlek`, including:
 
 - `CircleKCompany.json`
 - `PRODUCTS.json`
@@ -39,7 +39,7 @@ docker network create data_network
 
 2. Start the database service.
 3. Run `service_create_table_views_from_sql`.
-4. Ensure the required seed JSON files exist in `resource/json`.
+4. Ensure the required seed JSON files exist in `resource/json/circlek`.
 5. Create `.env` from `.env.example` in this folder.
 
 ## Run

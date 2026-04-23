@@ -3,12 +3,12 @@ import logging
 from libraries.utils.orchestrator import load_json_file, select_columns, update_insert_dw, ensure_table_structure
 from libraries.utils.db_types import TEXT, TIMESTAMP
 from tqdm import tqdm
-from libraries.utils.path_config import JSON_DIR
+from libraries.utils.path_config import DATAFORDELER_JSON_DIR
 
 logger = logging.getLogger(__name__)
 
 def convert_upsert(create_table_if_not_exist=False):
-    file_path = JSON_DIR
+    file_path = DATAFORDELER_JSON_DIR
     file_name = "DAR_Husnummer_1.json"
     columns_to_keep = {
         'id_lokalId': 'id',

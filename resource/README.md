@@ -13,8 +13,10 @@ Theme file and image assets used by the PBIP workspace.
 
 This folder is used for:
 
-- DAR and DAGI files downloaded from Datafordeler
-- static simulation seed files such as `CircleKCompany.json`, `PRODUCTS.json`, `CAMPAIGNS.json`, and `SEGMENTATIONSGROUPS.json`
+- `json/datafordeler`
+Downloaded DAR and DAGI files from Datafordeler.
+- `json/circlek`
+Static Circle K seed files such as `CircleKCompany.json`, `PRODUCTS.json`, `CAMPAIGNS.json`, and `SEGMENTATIONSGROUPS.json`.
 
 To populate or refresh the downloaded Datafordeler files, run:
 
@@ -22,7 +24,7 @@ To populate or refresh the downloaded Datafordeler files, run:
 docker compose -f source\code\service\api\service_dataformidler_download_files\docker-compose.yml up --build
 ```
 
-The download service writes into `resource/json` through a mounted volume.
+The download service writes into `resource/json/datafordeler` through a mounted volume.
 
 ## `powerbi`
 

@@ -13,7 +13,7 @@ services:
     volumes:
       - ./app:/app/app
       - ../../../runtime_definitions/service_simulation:/app/runtime_definitions/service_simulation
-      - ../../../../../resource:/app/resource
+      - ../../../../../resource/json/circlek:/app/resource/json/circlek
     networks:
       - data_network
     command: ["poetry", "run", "python", "app/main.py"]

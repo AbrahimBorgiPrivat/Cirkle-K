@@ -2,12 +2,12 @@ import logging
 
 from libraries.utils.orchestrator import load_json_file, update_insert_dw, ensure_table_structure
 from libraries.utils.db_types import BIGINT, TEXT,JSONB, ARRAY, DOUBLE
-from libraries.utils.path_config import JSON_DIR
+from libraries.utils.path_config import CIRCLEK_JSON_DIR
 
 logger = logging.getLogger(__name__)
 
 def convert_upsert(create_table_if_not_exist=False):
-    file_path = JSON_DIR
+    file_path = CIRCLEK_JSON_DIR
     file_name = "SEGMENTATIONSGROUPS.json"
     segmentationsgroups = load_json_file(file_path,file_name)
     db_name='circlek'

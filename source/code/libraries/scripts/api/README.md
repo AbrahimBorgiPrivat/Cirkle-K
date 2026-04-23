@@ -8,7 +8,7 @@ At the moment, the active module is:
 
 ## `dataformidler_download_files`
 
-This module downloads ZIP files from Datafordeler, extracts the JSON payloads, and stores the result under `resource/json`.
+This module downloads ZIP files from Datafordeler, extracts the JSON payloads, and stores the result under `resource/json/datafordeler`.
 
 ### Responsibilities
 
