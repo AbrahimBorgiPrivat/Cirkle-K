@@ -1,42 +1,102 @@
-# Circle K Project
+# Circle K Data & Analytics Cases
 
-This repository contains the Circle K data pipelines and the Power BI workspaces built on top of them.
+This repository contains two linked Circle K cases:
 
-The project is organized around a small set of Docker-based services:
+- `Interview case`
+  Focused on ice-cream sales in 2017-2018, promotion impact, site comparison, and KPI decomposition in Power BI.
+- `Simulation case`
+  A synthetic end-to-end loyalty analytics solution covering data generation, ETL, PostgreSQL, semantic modeling, and reporting.
 
-1. `source/code/service/database`
-Creates the PostgreSQL/PostGIS database.
-2. `source/code/service/etl/service_create_table_views_from_sql`
-Creates schemas, tables, and views from SQL files in `source/code/runtime_definitions/create_table_and_views`.
-3. `source/code/service/etl/service_interview_case1`
-Loads the interview CSV files into the `interview` schema.
-4. `source/code/service/api/service_dataformidler_download_files`
-Downloads DAR and DAGI files into `resource/json`.
-5. `source/code/service/etl/service_json_to_client`
-Loads the downloaded DAR and DAGI JSON files into PostgreSQL.
-6. `source/code/service/etl/service_simulation`
-Seeds and simulates the Circle K public tables used for the reporting case.
+The project also includes a GitHub Pages-ready static site in [site/html/index.html](site/html/index.html).
+
+## Purpose
+
+- `Interview case`
+  Build a clean data model and a short Power BI analysis of Danish ice-cream sales, including the 2018 promotion effect.
+- `Simulation case`
+  Demonstrate a realistic Circle K loyalty pipeline from Python simulation and external Danish geography data to Power BI dashboards.
+
+## Results
+
+- `Interview case`
+  2018 total sales increased by about `28%` and sales margin by about `16%` versus 2017.
+- `Interview case`
+  The promotion mainly lifted basket size, with the strongest effect at Station `1` and `3`, especially in the period `24 July` to `4 August`.
+- `Simulation case`
+  The first half of 2025 simulation produced about `474,000` transactions and about `DKK 76 million` in revenue.
+- `Simulation case`
+  Fuel-Only Driver had the most sign-ups, Heavy Shopper showed the highest long-term value, and the energy-drink campaigns were triggered most often.
+
+## Power BI Report Pages
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <strong>Interview - Overview</strong><br/>
+      <img src="site/assets/interview/page1.png" alt="Interview overview page" width="100%"><br/>
+      High-level KPIs, SPLY comparison, trends, and top products.
+    </td>
+    <td align="center" width="33%">
+      <strong>Interview - Compare Sites</strong><br/>
+      <img src="site/assets/interview/page2.png" alt="Interview compare sites page" width="100%"><br/>
+      A/B comparison between site groups with significance testing.
+    </td>
+    <td align="center" width="33%">
+      <strong>Interview - Driver Tree</strong><br/>
+      <img src="site/assets/interview/page3.png" alt="Interview driver tree page" width="100%"><br/>
+      KPI decomposition from margin down to units, price, and expense drivers.
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="33%">
+      <strong>Simulation - Overview</strong><br/>
+      <img src="site/assets/simulation/page1.png" alt="Simulation overview page" width="100%"><br/>
+      Revenue, volume, geography, and product performance for the loyalty program.
+    </td>
+    <td align="center" width="33%">
+      <strong>Simulation - Segmentation</strong><br/>
+      <img src="site/assets/simulation/page2.png" alt="Simulation segmentation page" width="100%"><br/>
+      Behavioral differences and value patterns across customer segments.
+    </td>
+    <td align="center" width="33%">
+      <strong>Simulation - Campaigns</strong><br/>
+      <img src="site/assets/simulation/page3.png" alt="Simulation campaigns page" width="100%"><br/>
+      Campaign engagement, triggered rewards, and regional variation.
+    </td>
+  </tr>
+</table>
+
+## ETL And Semantic Model
+
+| Area | Visual | Description |
+| --- | --- | --- |
+| Interview ETL | ![Interview ETL](site/assets/interview/etl_process.png) | CSV files are loaded into PostgreSQL, structured in SQL, and exposed to the interview PBIP model. |
+| Simulation ETL | ![Simulation ETL](site/assets/simulation/etl_process.png) | Docker services orchestrate Datafordeler ingestion, seed loading, simulation, and reporting tables. |
+| Interview semantic model | ![Interview semantic model](site/assets/interview/semanticmodel.png) | The interview report uses a simple star schema around `TRANSACTIONS`, `DATE_DIM`, `ITEM_MASTER`, and `SITE_MASTER`. |
+| Simulation semantic model | ![Simulation semantic model](site/assets/simulation/semanticmodel.png) | The simulation model extends the reporting layer with loyalty customers, cards, campaigns, stations, and transaction lines. |
 
 ## Repository Layout
 
 - `docs`
-Supporting documentation for both the interview case and the simulation case.
+  Source documents used for the case write-up and project context.
 - `resource`
-Shared runtime assets such as interview CSV files, downloaded JSON files, and Power BI visuals/theme files.
+  Shared assets such as CSV input, JSON input, and Power BI images/themes.
+- `site`
+  Static GitHub Pages-ready site with HTML, CSS, and report visuals.
 - `source/code`
-Python package, runtime definitions, and Docker services.
+  Python package, runtime definitions, and Docker services.
 - `source/workspaces`
-Power BI PBIP workspaces for the interview and simulation cases.
+  PBIP workspaces plus Tabular Editor automation assets.
 
 ## Recommended Run Order
 
-Create the shared Docker network once:
+Create the Docker network once:
 
 ```powershell
 docker network create data_network
 ```
 
-Then run the services in this order for the full repository setup:
+Then run the services:
 
 ```powershell
 docker compose -f source\code\service\database\docker-compose.yml up -d
@@ -47,23 +107,10 @@ docker compose -f source\code\service\etl\service_json_to_client\docker-compose.
 docker compose -f source\code\service\etl\service_simulation\docker-compose.yml up --build
 ```
 
-The ETL/API services are one-shot jobs. When they finish successfully, the containers stop with `Exited (0)`. That is expected.
+The ETL/API services are one-shot containers, so `Exited (0)` is the expected successful end state.
 
-## Case Assets
+## Notes
 
-- Interview case:
-  - docs: `docs/interview`
-  - csv input: `resource/csv`
-  - Power BI assets: `resource/powerbi/interview`
-  - PBIP workspace: `source/workspaces/interview`
-- Simulation case:
-  - docs: `docs/simulation`
-  - json input: `resource/json/datafordeler` and `resource/json/circlek`
-  - Power BI assets: `resource/powerbi/simulation`
-  - PBIP workspace: `source/workspaces/simulated`
-
-## Development Notes
-
-- `source/code` contains the Python package and Poetry project.
-- Service execution is runtime-driven through JSON files under `source/code/runtime_definitions`.
-- Shared logs now use Python `logging`, so Docker logs show service progress directly.
+- The interview write-up is based on `docs/interview`.
+- The simulation purpose and summary are based on `docs/simulation`.
+- Shared runtime logs use Python `logging`, so service progress is visible directly in Docker logs.

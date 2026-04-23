@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Circle K | Tabular Editor</title>
+  <meta name="description" content="How Tabular Editor automation is used in the Circle K PBIP workspaces." />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/layout.css" />
+  <link rel="stylesheet" href="../css/blocks.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="./index.html">
+        <img src="../assets/simulation/logo.png" alt="Circle K logo" />
+        <div>
+          <div class="brand-title">Circle K Cases</div>
+          <div class="brand-subtitle">Static project site</div>
+        </div>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="./index.html">Home</a>
+        <a href="./project-purpose.html">Purpose</a>
+        <a href="./architecture-pipeline.html">Pipeline</a>
+        <a href="./semantic-model.html">Model</a>
+        <a href="./power-bi-report.html">Power BI</a>
+        <a href="./results.html">Results</a>
+        <a href="./repository.html">Repo</a>
+        <a class="active" href="./tabular-editor.html">Tabular</a>
+      </nav>
+    </header>
+
+    <section class="page-hero">
+      <div class="page-hero-grid">
+        <div>
+          <div class="page-meta">Article 07 / Tabular Editor</div>
+          <h1>Tabular Editor And Reproducible Measures</h1>
+          <p class="lead">
+            Both PBIP workspaces now include Tabular assets so measures are not only stored inside the model, but also as readable source files.
+          </p>
+        </div>
+        <div class="quote-block">
+          The goal is reproducibility: measure logic can be reviewed as text, grouped logically, and reapplied to the semantic model through scripted execution.
+        </div>
+      </div>
+    </section>
+
+    <div class="article-layout">
+      <article class="article-body">
+        <section>
+          <h2>How it is structured</h2>
+          <ul>
+            <li>Each workspace has a local `Tabular` folder.</li>
+            <li>Each measure is stored as its own `.dax` file.</li>
+            <li>Each logical group has a `.csx` script that reads the `.dax` files and recreates the measures.</li>
+            <li>A shared `TabularEditorCLITool` C# library provides helper builders used by the scripts.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Why this improves reproducibility</h2>
+          <ul>
+            <li>Measure definitions are diff-friendly and code-review friendly.</li>
+            <li>Folder structure and display folders are defined in source, not only in the PBIP model state.</li>
+            <li>The same script can be rerun after model refreshes or workspace changes.</li>
+            <li>The helper DLL makes the scripting approach consistent across both workspaces.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Execution flow</h2>
+          <ul>
+            <li>`run_tabular_scripts.ps1` builds the helper library if needed.</li>
+            <li>Tabular Editor 2 runs the workspace-local `.csx` scripts.</li>
+            <li>The scripts recreate or update measures from the `.dax` files.</li>
+            <li>This keeps the semantic model aligned with the checked-in source assets.</li>
+          </ul>
+        </section>
+      </article>
+
+      <aside class="sidebar-column">
+        <div class="sidebar-card">
+          <div class="kicker">Used here</div>
+          <p>The interview workspace has grouped KPI and visual measures. The simulated workspace groups revenue, activity, loyalty, and campaign measures.</p>
+        </div>
+        <div class="sidebar-card">
+          <div class="kicker">Repository link</div>
+          <p>The repository page shows where the workspaces, scripts, and helper tool live relative to the rest of the solution.</p>
+          <div class="button-row">
+            <a class="button button-primary" href="./repository.html">Open repo page</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>

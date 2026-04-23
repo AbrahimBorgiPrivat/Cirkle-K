@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Circle K | Purpose</title>
+  <meta name="description" content="Purpose and scope of the Circle K interview and simulation cases." />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/layout.css" />
+  <link rel="stylesheet" href="../css/blocks.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="./index.html">
+        <img src="../assets/simulation/logo.png" alt="Circle K logo" />
+        <div>
+          <div class="brand-title">Circle K Cases</div>
+          <div class="brand-subtitle">Static project site</div>
+        </div>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="./index.html">Home</a>
+        <a class="active" href="./project-purpose.html">Purpose</a>
+        <a href="./architecture-pipeline.html">Pipeline</a>
+        <a href="./semantic-model.html">Model</a>
+        <a href="./power-bi-report.html">Power BI</a>
+        <a href="./results.html">Results</a>
+        <a href="./repository.html">Repo</a>
+        <a href="./tabular-editor.html">Tabular</a>
+      </nav>
+    </header>
+
+    <section class="page-hero">
+      <div class="page-hero-grid">
+        <div>
+          <div class="page-meta">Article 01 / Purpose</div>
+          <h1>Purpose</h1>
+          <p class="lead">
+            The two cases were built to show both focused business analysis and broader end-to-end analytics engineering.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Interview analysis</span>
+            <span class="tag">Simulation pipeline</span>
+            <span class="tag">Power BI storytelling</span>
+          </div>
+        </div>
+        <div class="quote-block">
+          The interview document defines the business task. The simulation document expands that into a full pipeline example with synthetic data, PostgreSQL, and interactive reporting.
+        </div>
+      </div>
+    </section>
+
+    <div class="article-layout">
+      <article class="article-body">
+        <section>
+          <h2>Interview case</h2>
+          <ul>
+            <li>Analyze ice-cream sales for Danish sites across 2017 and 2018.</li>
+            <li>Measure the effect of the 2018 promotion, identified by `trn_promotion_id = 47025`.</li>
+            <li>Design three pages: overview, compare sites, and driver tree.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Simulation case</h2>
+          <ul>
+            <li>Show how a realistic Circle K loyalty environment can be simulated end to end.</li>
+            <li>Model customers, cards, stations, transactions, campaigns, and geography.</li>
+            <li>Use the result to answer practical questions about segments, LTV, and campaign engagement.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>What the solution is meant to demonstrate</h2>
+          <ul>
+            <li>Business-facing interpretation, not just visuals.</li>
+            <li>Reusable ETL and semantic-model structure.</li>
+            <li>Ability to move from raw input to a report that is easy to explain.</li>
+          </ul>
+        </section>
+      </article>
+
+      <aside class="sidebar-column">
+        <div class="sidebar-card">
+          <div class="kicker">Source documents</div>
+          <p>The page summary is based on `docs/interview` and `docs/simulation`.</p>
+        </div>
+        <div class="sidebar-card">
+          <div class="kicker">Next article</div>
+          <p>The pipeline page shows how the cases are structured technically.</p>
+          <div class="button-row">
+            <a class="button button-primary" href="./architecture-pipeline.html">Open pipeline</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Circle K | Pipeline</title>
+  <meta name="description" content="ETL flow and architecture for the Circle K cases." />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/layout.css" />
+  <link rel="stylesheet" href="../css/blocks.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="./index.html">
+        <img src="../assets/simulation/logo.png" alt="Circle K logo" />
+        <div>
+          <div class="brand-title">Circle K Cases</div>
+          <div class="brand-subtitle">Static project site</div>
+        </div>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="./index.html">Home</a>
+        <a href="./project-purpose.html">Purpose</a>
+        <a class="active" href="./architecture-pipeline.html">Pipeline</a>
+        <a href="./semantic-model.html">Model</a>
+        <a href="./power-bi-report.html">Power BI</a>
+        <a href="./results.html">Results</a>
+        <a href="./repository.html">Repo</a>
+        <a href="./tabular-editor.html">Tabular</a>
+      </nav>
+    </header>
+
+    <section class="page-hero">
+      <div class="page-hero-grid">
+        <div>
+          <div class="page-meta">Article 02 / Pipeline</div>
+          <h1>Pipeline</h1>
+          <p class="lead">
+            Both cases are built as reproducible flows, but at different scales. The interview case is compact and SQL-first. The simulation case is broader and service-based.
+          </p>
+        </div>
+        <div class="quote-block">
+          The simulation write-up describes the project as a phased process from scoping and Python simulation to PostgreSQL, Power BI, and final documentation.
+        </div>
+      </div>
+    </section>
+
+    <section class="section-panel plain">
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <img src="../assets/interview/etl_process.png" alt="Interview ETL pipeline" />
+          <div class="gallery-copy">
+            <div class="tile-meta">Interview flow</div>
+            <h3>CSV to PostgreSQL to PBIP</h3>
+            <p>The interview case loads CSV files into PostgreSQL, applies SQL structure, and keeps Power BI focused on semantic logic and visuals.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="../assets/simulation/etl_process.png" alt="Simulation ETL pipeline" />
+          <div class="gallery-copy">
+            <div class="tile-meta">Simulation flow</div>
+            <h3>Services and orchestration</h3>
+            <p>The simulation case combines external Danish data, seed files, synthetic generation, upserts, and Dockerized services before the report layer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="article-layout">
+      <article class="article-body">
+        <section>
+          <h2>Interview pipeline</h2>
+          <ul>
+            <li>CSV facts and dimensions are loaded into PostgreSQL.</li>
+            <li>SQL views shape the reporting layer.</li>
+            <li>The PBIP model uses a clean star schema and grouped measures.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Simulation pipeline</h2>
+          <ul>
+            <li>Python generates customers, cards, campaigns, transactions, and cashiers.</li>
+            <li>DAR and DAGI data enrich the geographic side of the model.</li>
+            <li>Docker services handle ingestion, load, simulation, and reporting tables.</li>
+          </ul>
+        </section>
+      </article>
+
+      <aside class="sidebar-column">
+        <div class="sidebar-card">
+          <div class="kicker">Implementation style</div>
+          <p>Runtime-driven services and PBIP workspaces are kept in source control, while static input data is mounted into containers when relevant.</p>
+        </div>
+        <div class="sidebar-card">
+          <div class="kicker">Next article</div>
+          <p>The next page focuses on the semantic model and the core business entities.</p>
+          <div class="button-row">
+            <a class="button button-primary" href="./semantic-model.html">Open model</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>

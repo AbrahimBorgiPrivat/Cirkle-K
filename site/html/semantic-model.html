@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Circle K | Semantic Model</title>
+  <meta name="description" content="Semantic model overview for the Circle K cases." />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/layout.css" />
+  <link rel="stylesheet" href="../css/blocks.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="./index.html">
+        <img src="../assets/simulation/logo.png" alt="Circle K logo" />
+        <div>
+          <div class="brand-title">Circle K Cases</div>
+          <div class="brand-subtitle">Static project site</div>
+        </div>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="./index.html">Home</a>
+        <a href="./project-purpose.html">Purpose</a>
+        <a href="./architecture-pipeline.html">Pipeline</a>
+        <a class="active" href="./semantic-model.html">Model</a>
+        <a href="./power-bi-report.html">Power BI</a>
+        <a href="./results.html">Results</a>
+        <a href="./repository.html">Repo</a>
+        <a href="./tabular-editor.html">Tabular</a>
+      </nav>
+    </header>
+
+    <section class="page-hero">
+      <div class="page-hero-grid">
+        <div>
+          <div class="page-meta">Article 03 / Semantic model</div>
+          <h1>Semantic Model</h1>
+          <p class="lead">
+            The interview case uses a compact star schema. The simulation case expands that idea into a wider loyalty model with customer, campaign, and transaction entities.
+          </p>
+        </div>
+        <div class="quote-block">
+          The interview document explicitly describes a central transaction fact linked to date, item, and site dimensions. The simulation document adds customers, cards, campaigns, stations, cashiers, and transaction lines.
+        </div>
+      </div>
+    </section>
+
+    <section class="section-panel plain">
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <img src="../assets/interview/semanticmodel.png" alt="Interview semantic model" />
+          <div class="gallery-copy">
+            <div class="tile-meta">Interview semantic model</div>
+            <h3>Simple star schema</h3>
+            <p>The reporting model centers on `TRANSACTIONS`, with supporting dimensions for date, item, and site to support year-over-year, product, and geography analysis.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="../assets/simulation/semanticmodel.png" alt="Simulation semantic model" />
+          <div class="gallery-copy">
+            <div class="tile-meta">Simulation semantic model</div>
+            <h3>Wider loyalty structure</h3>
+            <p>The simulation model adds customers, cards, campaigns, stations, cashiers, and transaction lines to support segmentation and campaign analysis.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="article-layout">
+      <article class="article-body">
+        <section>
+          <h2>Interview entities</h2>
+          <ul>
+            <li>`TRANSACTIONS` as the central fact table.</li>
+            <li>`DATE_DIM` for SPLY and period slicing.</li>
+            <li>`ITEM_MASTER` for product names, categories, and images.</li>
+            <li>`SITE_MASTER` for region, city, and station context.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Simulation entities</h2>
+          <ul>
+            <li>`LOYALITY_CUSTOMERS`, `CARDS`, and `SEGMENTATIONSGROUPS` describe the loyalty side.</li>
+            <li>`TRANSACTIONS` and `TRANSACTIONSLINES` capture purchase behavior.</li>
+            <li>`CAMPAIGNS` and `CAMPAIGN_TRANSACTIONS` support redemption analysis.</li>
+            <li>`STATIONS` and `CASHIERS` connect behavior to geography and point of sale.</li>
+          </ul>
+        </section>
+      </article>
+
+      <aside class="sidebar-column">
+        <div class="sidebar-card">
+          <div class="kicker">Why it matters</div>
+          <p>A clean semantic model keeps measures reusable, visuals easier to explain, and Tabular automation practical.</p>
+        </div>
+        <div class="sidebar-card">
+          <div class="kicker">Next article</div>
+          <p>The next page shows the actual Power BI pages in a short visual gallery.</p>
+          <div class="button-row">
+            <a class="button button-primary" href="./power-bi-report.html">Open report pages</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>

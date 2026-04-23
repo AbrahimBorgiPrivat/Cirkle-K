@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Circle K | Repository</title>
+  <meta name="description" content="Repository structure for the Circle K cases." />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/layout.css" />
+  <link rel="stylesheet" href="../css/blocks.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="./index.html">
+        <img src="../assets/simulation/logo.png" alt="Circle K logo" />
+        <div>
+          <div class="brand-title">Circle K Cases</div>
+          <div class="brand-subtitle">Static project site</div>
+        </div>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="./index.html">Home</a>
+        <a href="./project-purpose.html">Purpose</a>
+        <a href="./architecture-pipeline.html">Pipeline</a>
+        <a href="./semantic-model.html">Model</a>
+        <a href="./power-bi-report.html">Power BI</a>
+        <a href="./results.html">Results</a>
+        <a class="active" href="./repository.html">Repo</a>
+        <a href="./tabular-editor.html">Tabular</a>
+      </nav>
+    </header>
+
+    <section class="page-hero">
+      <div class="page-hero-grid">
+        <div>
+          <div class="page-meta">Article 06 / Repository</div>
+          <h1>Repository Structure</h1>
+          <p class="lead">
+            The repository is split so that documentation, runtime assets, code, PBIP workspaces, and the static site each have a clear role.
+          </p>
+        </div>
+        <div class="quote-block">
+          The structure is meant to make the solution easy to rerun, review, and explain. Technical assets stay close to the code that uses them.
+        </div>
+      </div>
+    </section>
+
+    <div class="article-layout">
+      <article class="article-body">
+        <section>
+          <h2>Main folders</h2>
+          <ul>
+            <li>`docs` holds the original interview and simulation documents used for project framing and conclusions.</li>
+            <li>`resource` contains CSV input, JSON input, and Power BI themes or images.</li>
+            <li>`source/code` contains the Python package, runtime definitions, and Docker services.</li>
+            <li>`source/workspaces` contains the PBIP models plus Tabular Editor automation assets.</li>
+            <li>`site` contains the GitHub Pages-ready static documentation site.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Why this split works</h2>
+          <ul>
+            <li>Input data is separated from execution code.</li>
+            <li>PBIP workspaces stay versioned independently from Docker services.</li>
+            <li>The static site can be published without exposing the full working environment.</li>
+            <li>Tabular assets live next to the workspaces they update.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Operational view</h2>
+          <ul>
+            <li>Docker services build and load the reporting layer.</li>
+            <li>PBIP and Tabular assets define the analytical layer.</li>
+            <li>The site and README define the presentation layer.</li>
+          </ul>
+        </section>
+      </article>
+
+      <aside class="sidebar-column">
+        <div class="sidebar-card">
+          <div class="kicker">Good fit for GitHub</div>
+          <p>The layout keeps large static visuals in `site/assets`, technical scripts in `source`, and project narrative in `docs` and the static site.</p>
+        </div>
+        <div class="sidebar-card">
+          <div class="kicker">Next article</div>
+          <p>The Tabular page explains how measures are scripted into reproducible assets.</p>
+          <div class="button-row">
+            <a class="button button-primary" href="./tabular-editor.html">Open Tabular page</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>
