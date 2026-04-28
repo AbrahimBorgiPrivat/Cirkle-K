@@ -10,16 +10,50 @@
 </head>
 <body>
   <div class="site-shell">
-    <section class="hero" style="min-height: 60vh; display: grid; place-items: center; text-align: center;">
-      <div>
-        <div class="eyebrow">404</div>
-        <h1>Page not found</h1>
-        <p class="lead">The page does not exist or has been moved.</p>
-        <div class="button-row" style="justify-content: center;">
-          <a class="button button-primary" href="./index.html">Back to home</a>
+    <header class="topbar">
+      <a class="brand" href="./index.html">
+        <img src="../assets/simulation/logo.png" alt="Circle K logo" />
+        <div>
+          <div class="brand-title">Circle K Cases</div>
+          <div class="brand-subtitle">Data &amp; analytics</div>
         </div>
+      </a>
+      <div class="topbar-actions">
+        <a class="topbar-link" href="https://abrahimborgiprivat.github.io/AIRPORT/html/index.html" target="_blank" rel="noreferrer">AIRPORT</a>
+        <img class="topbar-profile" src="../assets/profile/AbrahimProfilePicture.jpg" alt="Abrahim Borgi profile picture" />
       </div>
-    </section>
+    </header>
+
+    <div class="page-layout">
+      <aside class="side-menu">
+        <h2 class="side-menu-title">Menu</h2>
+        <nav class="side-nav" aria-label="Main navigation">
+          <a class="topbar-link" href="./index.html">Home</a>
+          <a class="topbar-link" href="./project-purpose.html">Purpose</a>
+          <a class="topbar-link" href="./architecture-pipeline.html">Pipeline</a>
+          <a class="topbar-link" href="./semantic-model.html">Model</a>
+          <a class="topbar-link" href="./power-bi-report.html">Power BI</a>
+          <a class="topbar-link" href="./results.html">Results</a>
+          <a class="topbar-link" href="./repository.html">Repo</a>
+          <a class="topbar-link" href="./tabular-editor.html">Tabular</a>
+        </nav>
+      </aside>
+
+      <main class="content-column">
+        <section class="page-hero">
+          <div class="page-meta">404</div>
+          <h1>Page not found</h1>
+          <p class="lead">Try the home page instead.</p>
+          <p>
+            The link may have changed, or the page may no longer exist.
+            Use the menu or return to the front page to continue browsing.
+          </p>
+          <div class="button-row">
+            <a class="button button-primary" href="./index.html">Back home</a>
+          </div>
+        </section>
+      </main>
+    </div>
   </div>
 </body>
 </html>

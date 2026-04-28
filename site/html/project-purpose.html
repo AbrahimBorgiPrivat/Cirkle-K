@@ -16,89 +16,74 @@
         <img src="../assets/simulation/logo.png" alt="Circle K logo" />
         <div>
           <div class="brand-title">Circle K Cases</div>
-          <div class="brand-subtitle">Static project site</div>
+          <div class="brand-subtitle">Data &amp; analytics</div>
         </div>
       </a>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="./index.html">Home</a>
-        <a class="active" href="./project-purpose.html">Purpose</a>
-        <a href="./architecture-pipeline.html">Pipeline</a>
-        <a href="./semantic-model.html">Model</a>
-        <a href="./power-bi-report.html">Power BI</a>
-        <a href="./results.html">Results</a>
-        <a href="./repository.html">Repo</a>
-        <a href="./tabular-editor.html">Tabular</a>
-      </nav>
+      <div class="topbar-actions">
+        <a class="topbar-link" href="https://abrahimborgiprivat.github.io/AIRPORT/html/index.html" target="_blank" rel="noreferrer">AIRPORT</a>
+        <img class="topbar-profile" src="../assets/profile/AbrahimProfilePicture.jpg" alt="Abrahim Borgi profile picture" />
+      </div>
     </header>
 
-    <section class="page-hero">
-      <div class="page-hero-grid">
-        <div>
-          <div class="page-meta">Article 01 / Purpose</div>
-          <h1>Purpose</h1>
-          <p class="lead">
-            The two cases were built to show both focused business analysis and broader end-to-end analytics engineering.
-          </p>
-          <div class="tag-row">
-            <span class="tag">Interview analysis</span>
-            <span class="tag">Simulation pipeline</span>
-            <span class="tag">Power BI storytelling</span>
-          </div>
-        </div>
-        <div class="quote-block">
-          <h3>Purpose in short</h3>
-          <ul class="compact-list">
-            <li>The interview case focuses on a concrete business question around sales, promotion effect, and site comparison.</li>
-            <li>The simulation case expands the scope into a full analytics delivery with synthetic data, PostgreSQL, and reporting.</li>
-            <li>Together they show both business reasoning and technical execution in one solution.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <div class="article-layout">
-      <article class="article-body">
-        <section>
-          <h2>Interview case</h2>
-          <ul>
-            <li>Analyze ice-cream sales for Danish sites across 2017 and 2018.</li>
-            <li>Measure the effect of the 2018 promotion, identified by `trn_promotion_id = 47025`.</li>
-            <li>Design three pages: overview, compare sites, and driver tree.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Simulation case</h2>
-          <ul>
-            <li>Show how a realistic Circle K loyalty environment can be simulated end to end.</li>
-            <li>Model customers, cards, stations, transactions, campaigns, and geography.</li>
-            <li>Use the result to answer practical questions about segments, LTV, and campaign engagement.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>What the solution is meant to demonstrate</h2>
-          <ul>
-            <li>Business-facing interpretation, not just visuals.</li>
-            <li>Reusable ETL and semantic-model structure.</li>
-            <li>Ability to move from raw input to a report that is easy to explain.</li>
-          </ul>
-        </section>
-      </article>
-
-      <aside class="sidebar-column">
-        <div class="sidebar-card">
-          <div class="kicker">Source documents</div>
-          <p>The page summary is based on `docs/interview` and `docs/simulation`.</p>
-        </div>
-        <div class="sidebar-card">
-          <div class="kicker">Next article</div>
-          <p>The pipeline page shows how the cases are structured technically.</p>
-          <div class="button-row">
-            <a class="button button-primary" href="./architecture-pipeline.html">Open pipeline</a>
-          </div>
-        </div>
+    <div class="page-layout">
+      <aside class="side-menu">
+        <h2 class="side-menu-title">Menu</h2>
+        <nav class="side-nav" aria-label="Main navigation">
+          <a class="topbar-link" href="./index.html">Home</a>
+          <a class="topbar-link active" href="./project-purpose.html">Purpose</a>
+          <a class="topbar-link" href="./architecture-pipeline.html">Pipeline</a>
+          <a class="topbar-link" href="./semantic-model.html">Model</a>
+          <a class="topbar-link" href="./power-bi-report.html">Power BI</a>
+          <a class="topbar-link" href="./results.html">Results</a>
+          <a class="topbar-link" href="./repository.html">Repo</a>
+          <a class="topbar-link" href="./tabular-editor.html">Tabular</a>
+        </nav>
       </aside>
+
+      <main class="content-column">
+        <section class="page-hero">
+          <div class="page-meta">Purpose</div>
+          <p class="lead">One focused analysis and one broader end-to-end data platform case.</p>
+          <p>
+            The purpose is to show both sides of the delivery: a business-facing case with clear findings,
+            and a more technical case with data generation, modeling, and reporting.
+          </p>
+
+          <ul>
+            <li>Show focused business analysis with clear conclusions.</li>
+            <li>Show a reproducible analytics flow from source data to report.</li>
+            <li>Show how both cases fit into one portfolio-style delivery.</li>
+          </ul>
+
+          <div class="section-header">
+            <h2>In short</h2>
+          </div>
+
+          <div class="simple-list">
+            <div class="simple-list-item">
+              <div class="tile-meta">Case 01</div>
+              <div>
+                <h3>Interview</h3>
+                <p>Sales, promotion effect, site comparison.</p>
+              </div>
+            </div>
+            <div class="simple-list-item">
+              <div class="tile-meta">Case 02</div>
+              <div>
+                <h3>Simulation</h3>
+                <p>Loyalty data, ETL flow, reporting.</p>
+              </div>
+            </div>
+            <div class="simple-list-item">
+              <div class="tile-meta">Focus</div>
+              <div>
+                <h3>Delivery</h3>
+                <p>Business reasoning plus technical execution.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   </div>
 </body>

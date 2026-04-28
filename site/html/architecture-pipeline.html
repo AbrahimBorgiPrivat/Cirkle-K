@@ -16,97 +16,77 @@
         <img src="../assets/simulation/logo.png" alt="Circle K logo" />
         <div>
           <div class="brand-title">Circle K Cases</div>
-          <div class="brand-subtitle">Static project site</div>
+          <div class="brand-subtitle">Data &amp; analytics</div>
         </div>
       </a>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="./index.html">Home</a>
-        <a href="./project-purpose.html">Purpose</a>
-        <a class="active" href="./architecture-pipeline.html">Pipeline</a>
-        <a href="./semantic-model.html">Model</a>
-        <a href="./power-bi-report.html">Power BI</a>
-        <a href="./results.html">Results</a>
-        <a href="./repository.html">Repo</a>
-        <a href="./tabular-editor.html">Tabular</a>
-      </nav>
+      <div class="topbar-actions">
+        <a class="topbar-link" href="https://abrahimborgiprivat.github.io/AIRPORT/html/index.html" target="_blank" rel="noreferrer">AIRPORT</a>
+        <img class="topbar-profile" src="../assets/profile/AbrahimProfilePicture.jpg" alt="Abrahim Borgi profile picture" />
+      </div>
     </header>
 
-    <section class="page-hero">
-      <div class="page-hero-grid">
-        <div>
-          <div class="page-meta">Article 02 / Pipeline</div>
-          <h1>Pipeline</h1>
-          <p class="lead">
-            Both cases are built as reproducible flows, but at different scales. The interview case is compact and SQL-first. The simulation case is broader and service-based.
-          </p>
-        </div>
-        <div class="quote-block">
-          <h3>What this page shows</h3>
-          <ul class="compact-list">
-            <li>The interview flow is a short path from CSV inputs to PostgreSQL and a PBIP model.</li>
-            <li>The simulation flow adds Docker services, synthetic generation, and reporting-table orchestration.</li>
-            <li>Both setups aim for a repeatable route from source data to semantic reporting.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-panel plain">
-      <div class="gallery-grid two">
-        <div class="gallery-card">
-          <img src="../assets/interview/etl_process.png" alt="Interview ETL pipeline" />
-          <div class="gallery-copy">
-            <div class="tile-meta">Interview flow</div>
-            <h3>CSV to PostgreSQL to PBIP</h3>
-            <p>The interview case loads CSV files into PostgreSQL, applies SQL structure, and keeps Power BI focused on semantic logic and visuals.</p>
-          </div>
-        </div>
-
-        <div class="gallery-card">
-          <img src="../assets/simulation/etl_process.png" alt="Simulation ETL pipeline" />
-          <div class="gallery-copy">
-            <div class="tile-meta">Simulation flow</div>
-            <h3>Services and orchestration</h3>
-            <p>The simulation case combines external Danish data, seed files, synthetic generation, upserts, and Dockerized services before the report layer.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="article-layout">
-      <article class="article-body">
-        <section>
-          <h2>Interview pipeline</h2>
-          <ul>
-            <li>CSV facts and dimensions are loaded into PostgreSQL.</li>
-            <li>SQL views shape the reporting layer.</li>
-            <li>The PBIP model uses a clean star schema and grouped measures.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Simulation pipeline</h2>
-          <ul>
-            <li>Python generates customers, cards, campaigns, transactions, and cashiers.</li>
-            <li>DAR and DAGI data enrich the geographic side of the model.</li>
-            <li>Docker services handle ingestion, load, simulation, and reporting tables.</li>
-          </ul>
-        </section>
-      </article>
-
-      <aside class="sidebar-column">
-        <div class="sidebar-card">
-          <div class="kicker">Implementation style</div>
-          <p>Runtime-driven services and PBIP workspaces are kept in source control, while static input data is mounted into containers when relevant.</p>
-        </div>
-        <div class="sidebar-card">
-          <div class="kicker">Next article</div>
-          <p>The next page focuses on the semantic model and the core business entities.</p>
-          <div class="button-row">
-            <a class="button button-primary" href="./semantic-model.html">Open model</a>
-          </div>
-        </div>
+    <div class="page-layout">
+      <aside class="side-menu">
+        <h2 class="side-menu-title">Menu</h2>
+        <nav class="side-nav" aria-label="Main navigation">
+          <a class="topbar-link" href="./index.html">Home</a>
+          <a class="topbar-link" href="./project-purpose.html">Purpose</a>
+          <a class="topbar-link active" href="./architecture-pipeline.html">Pipeline</a>
+          <a class="topbar-link" href="./semantic-model.html">Model</a>
+          <a class="topbar-link" href="./power-bi-report.html">Power BI</a>
+          <a class="topbar-link" href="./results.html">Results</a>
+          <a class="topbar-link" href="./repository.html">Repo</a>
+          <a class="topbar-link" href="./tabular-editor.html">Tabular</a>
+        </nav>
       </aside>
+
+      <main class="content-column">
+        <section class="page-hero">
+          <div class="page-meta">Pipeline</div>
+          <p class="lead">Two flows. Same reporting goal.</p>
+          <p>
+            The pipeline view shows how the interview case stays compact,
+            while the simulation case expands into a broader service-based setup.
+          </p>
+
+          <div class="gallery-grid two">
+            <div class="gallery-card">
+              <img src="../assets/interview/etl_process.png" alt="Interview ETL pipeline" />
+              <div class="gallery-copy">
+                <div class="tile-meta">Interview</div>
+                <h3>Compact flow</h3>
+                <p>CSV, PostgreSQL, PBIP.</p>
+              </div>
+            </div>
+
+            <div class="gallery-card">
+              <img src="../assets/simulation/etl_process.png" alt="Simulation ETL pipeline" />
+              <div class="gallery-copy">
+                <div class="tile-meta">Simulation</div>
+                <h3>Broader flow</h3>
+                <p>Services, generation, reporting tables.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-header">
+            <h2>Highlights</h2>
+          </div>
+
+          <div class="simple-list">
+            <div class="simple-list-item">
+              <div class="tile-meta">Interview</div>
+              <h3>Lean path</h3>
+              <p>Short route from file input to report model.</p>
+            </div>
+            <div class="simple-list-item">
+              <div class="tile-meta">Simulation</div>
+              <h3>Service stack</h3>
+              <p>Generation, enrichment, load, reporting.</p>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   </div>
 </body>

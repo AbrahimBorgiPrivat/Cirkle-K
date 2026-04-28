@@ -16,87 +16,58 @@
         <img src="../assets/simulation/logo.png" alt="Circle K logo" />
         <div>
           <div class="brand-title">Circle K Cases</div>
-          <div class="brand-subtitle">Static project site</div>
+          <div class="brand-subtitle">Data &amp; analytics</div>
         </div>
       </a>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="./index.html">Home</a>
-        <a href="./project-purpose.html">Purpose</a>
-        <a href="./architecture-pipeline.html">Pipeline</a>
-        <a href="./semantic-model.html">Model</a>
-        <a href="./power-bi-report.html">Power BI</a>
-        <a href="./results.html">Results</a>
-        <a href="./repository.html">Repo</a>
-        <a class="active" href="./tabular-editor.html">Tabular</a>
-      </nav>
+      <div class="topbar-actions">
+        <a class="topbar-link" href="https://abrahimborgiprivat.github.io/AIRPORT/html/index.html" target="_blank" rel="noreferrer">AIRPORT</a>
+        <img class="topbar-profile" src="../assets/profile/AbrahimProfilePicture.jpg" alt="Abrahim Borgi profile picture" />
+      </div>
     </header>
 
-    <section class="page-hero">
-      <div class="page-hero-grid">
-        <div>
-          <div class="page-meta">Article 07 / Tabular Editor</div>
-          <h1>Tabular Editor And Reproducible Measures</h1>
-          <p class="lead">
-            Both PBIP workspaces now include Tabular assets so measures are not only stored inside the model, but also as readable source files.
-          </p>
-        </div>
-        <div class="quote-block">
-          <h3>Reproducibility focus</h3>
-          <ul class="compact-list">
-            <li>Measure logic is stored as text, so it can be reviewed and versioned like code.</li>
-            <li>Logical groups and display folders are recreated through scripts instead of manual clicks.</li>
-            <li>The same setup can be rerun to keep the semantic model aligned with source control.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <div class="article-layout">
-      <article class="article-body">
-        <section>
-          <h2>How it is structured</h2>
-          <ul>
-            <li>Each workspace has a local `Tabular` folder.</li>
-            <li>Each measure is stored as its own `.dax` file.</li>
-            <li>Each logical group has a `.csx` script that reads the `.dax` files and recreates the measures.</li>
-            <li>A shared `TabularEditorCLITool` C# library provides helper builders used by the scripts.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Why this improves reproducibility</h2>
-          <ul>
-            <li>Measure definitions are diff-friendly and code-review friendly.</li>
-            <li>Folder structure and display folders are defined in source, not only in the PBIP model state.</li>
-            <li>The same script can be rerun after model refreshes or workspace changes.</li>
-            <li>The helper DLL makes the scripting approach consistent across both workspaces.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Execution flow</h2>
-          <ul>
-            <li>`run_tabular_scripts.ps1` builds the helper library if needed.</li>
-            <li>Tabular Editor 2 runs the workspace-local `.csx` scripts.</li>
-            <li>The scripts recreate or update measures from the `.dax` files.</li>
-            <li>This keeps the semantic model aligned with the checked-in source assets.</li>
-          </ul>
-        </section>
-      </article>
-
-      <aside class="sidebar-column">
-        <div class="sidebar-card">
-          <div class="kicker">Used here</div>
-          <p>The interview workspace has grouped KPI and visual measures. The simulated workspace groups revenue, activity, loyalty, and campaign measures.</p>
-        </div>
-        <div class="sidebar-card">
-          <div class="kicker">Repository link</div>
-          <p>The repository page shows where the workspaces, scripts, and helper tool live relative to the rest of the solution.</p>
-          <div class="button-row">
-            <a class="button button-primary" href="./repository.html">Open repo page</a>
-          </div>
-        </div>
+    <div class="page-layout">
+      <aside class="side-menu">
+        <h2 class="side-menu-title">Menu</h2>
+        <nav class="side-nav" aria-label="Main navigation">
+          <a class="topbar-link" href="./index.html">Home</a>
+          <a class="topbar-link" href="./project-purpose.html">Purpose</a>
+          <a class="topbar-link" href="./architecture-pipeline.html">Pipeline</a>
+          <a class="topbar-link" href="./semantic-model.html">Model</a>
+          <a class="topbar-link" href="./power-bi-report.html">Power BI</a>
+          <a class="topbar-link" href="./results.html">Results</a>
+          <a class="topbar-link" href="./repository.html">Repo</a>
+          <a class="topbar-link active" href="./tabular-editor.html">Tabular</a>
+        </nav>
       </aside>
+
+      <main class="content-column">
+        <section class="page-hero">
+          <div class="page-meta">Tabular</div>
+          <p class="lead">Readable, scripted, repeatable.</p>
+          <p>
+            The Tabular setup keeps measure logic outside the PBIP model itself,
+            making it easier to review, version, and recreate grouped measures.
+          </p>
+
+          <div class="simple-list">
+            <div class="simple-list-item">
+              <div class="tile-meta">Files</div>
+              <h3>DAX per measure</h3>
+              <p>One file per measure definition.</p>
+            </div>
+            <div class="simple-list-item">
+              <div class="tile-meta">Scripts</div>
+              <h3>CSX per group</h3>
+              <p>Recreate grouped measures consistently.</p>
+            </div>
+            <div class="simple-list-item">
+              <div class="tile-meta">Goal</div>
+              <h3>Source controlled</h3>
+              <p>Reviewable logic outside the PBIP file.</p>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   </div>
 </body>

@@ -16,87 +16,77 @@
         <img src="../assets/simulation/logo.png" alt="Circle K logo" />
         <div>
           <div class="brand-title">Circle K Cases</div>
-          <div class="brand-subtitle">Static project site</div>
+          <div class="brand-subtitle">Data &amp; analytics</div>
         </div>
       </a>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="./index.html">Home</a>
-        <a href="./project-purpose.html">Purpose</a>
-        <a href="./architecture-pipeline.html">Pipeline</a>
-        <a href="./semantic-model.html">Model</a>
-        <a href="./power-bi-report.html">Power BI</a>
-        <a class="active" href="./results.html">Results</a>
-        <a href="./repository.html">Repo</a>
-        <a href="./tabular-editor.html">Tabular</a>
-      </nav>
+      <div class="topbar-actions">
+        <a class="topbar-link" href="https://abrahimborgiprivat.github.io/AIRPORT/html/index.html" target="_blank" rel="noreferrer">AIRPORT</a>
+        <img class="topbar-profile" src="../assets/profile/AbrahimProfilePicture.jpg" alt="Abrahim Borgi profile picture" />
+      </div>
     </header>
 
-    <section class="page-hero">
-      <div class="page-hero-grid">
-        <div>
-          <div class="page-meta">Article 05 / Results</div>
-          <h1>Results</h1>
-          <p class="lead">
-            The final outcome is a compact pair of business cases: one focused sales analysis and one broader loyalty simulation with reusable technical structure.
-          </p>
-        </div>
-        <div class="quote-block">
-          <h3>Outcome at a glance</h3>
-          <ul class="compact-list">
-            <li>The interview case ends in concrete findings about sales lift, margin, and promotion timing.</li>
-            <li>The simulation case ends in a broader loyalty story around segments, campaigns, and station behavior.</li>
-            <li>The shared result is a delivery that links data work, semantic design, and decision-ready reporting.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <div class="article-layout">
-      <article class="article-body">
-        <section>
-          <h2>Interview findings</h2>
-          <ul>
-            <li>Sales increased about `28%` and margin about `16%` in 2018 versus 2017.</li>
-            <li>The promotion mainly increased average units per transaction.</li>
-            <li>Station 1 and Station 3 showed the strongest promotion effect.</li>
-            <li>The most visible uplift period was `24 July` to `4 August`.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Simulation findings</h2>
-          <ul>
-            <li>The first half of 2025 simulation generated about `474,000` transactions and about `DKK 76 million` revenue.</li>
-            <li>The highest station activity was concentrated in Copenhagen, Fyn, and Sjaelland.</li>
-            <li>Fuel-Only Driver had the most sign-ups.</li>
-            <li>Heavy Shopper showed the highest long-term value.</li>
-            <li>Red Bull and Faxe Kondi Booster campaigns were triggered most often.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Delivery outcome</h2>
-          <ul>
-            <li>Dockerized ETL flows and PBIP workspaces are versioned in one repository.</li>
-            <li>Tabular Editor automation is prepared for both PBIP models.</li>
-            <li>The site is ready to be published as a static GitHub Pages project.</li>
-          </ul>
-        </section>
-      </article>
-
-      <aside class="sidebar-column">
-        <div class="sidebar-card">
-          <div class="kicker">Short summary</div>
-          <p>The solution is strongest as a combined story: technical structure, usable semantic models, and clear business-facing Power BI output.</p>
-        </div>
-        <div class="sidebar-card">
-          <div class="kicker">More technical detail</div>
-          <p>The repository and Tabular pages describe how the solution is structured and how measures are kept reproducible.</p>
-          <div class="button-row">
-            <a class="button button-primary" href="./repository.html">Open repo page</a>
-          </div>
-        </div>
+    <div class="page-layout">
+      <aside class="side-menu">
+        <h2 class="side-menu-title">Menu</h2>
+        <nav class="side-nav" aria-label="Main navigation">
+          <a class="topbar-link" href="./index.html">Home</a>
+          <a class="topbar-link" href="./project-purpose.html">Purpose</a>
+          <a class="topbar-link" href="./architecture-pipeline.html">Pipeline</a>
+          <a class="topbar-link" href="./semantic-model.html">Model</a>
+          <a class="topbar-link" href="./power-bi-report.html">Power BI</a>
+          <a class="topbar-link active" href="./results.html">Results</a>
+          <a class="topbar-link" href="./repository.html">Repo</a>
+          <a class="topbar-link" href="./tabular-editor.html">Tabular</a>
+        </nav>
       </aside>
+
+      <main class="content-column">
+        <section class="page-hero">
+          <div class="page-meta">Results</div>
+          <p class="lead">Short version of the outcome.</p>
+          <p>
+            This page keeps the most important findings from both cases in one place,
+            so the takeaway is visible without reading the full walkthrough.
+          </p>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <span>Sales up</span>
+              <strong>28%</strong>
+            </div>
+            <div class="stat-card">
+              <span>Margin up</span>
+              <strong>16%</strong>
+            </div>
+            <div class="stat-card">
+              <span>Transactions</span>
+              <strong>474K</strong>
+            </div>
+          </div>
+
+          <div class="section-header">
+            <h2>Highlights</h2>
+          </div>
+
+          <div class="simple-list">
+            <div class="simple-list-item">
+              <div class="tile-meta">Interview</div>
+              <h3>Promotion effect</h3>
+              <p>Strongest at Station 1 and Station 3.</p>
+            </div>
+            <div class="simple-list-item">
+              <div class="tile-meta">Timing</div>
+              <h3>Peak period</h3>
+              <p>Late July to early August.</p>
+            </div>
+            <div class="simple-list-item">
+              <div class="tile-meta">Simulation</div>
+              <h3>Top value</h3>
+              <p>Heavy Shopper had the highest long-term value.</p>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   </div>
 </body>

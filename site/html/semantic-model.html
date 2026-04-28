@@ -16,99 +16,60 @@
         <img src="../assets/simulation/logo.png" alt="Circle K logo" />
         <div>
           <div class="brand-title">Circle K Cases</div>
-          <div class="brand-subtitle">Static project site</div>
+          <div class="brand-subtitle">Data &amp; analytics</div>
         </div>
       </a>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="./index.html">Home</a>
-        <a href="./project-purpose.html">Purpose</a>
-        <a href="./architecture-pipeline.html">Pipeline</a>
-        <a class="active" href="./semantic-model.html">Model</a>
-        <a href="./power-bi-report.html">Power BI</a>
-        <a href="./results.html">Results</a>
-        <a href="./repository.html">Repo</a>
-        <a href="./tabular-editor.html">Tabular</a>
-      </nav>
+      <div class="topbar-actions">
+        <a class="topbar-link" href="https://abrahimborgiprivat.github.io/AIRPORT/html/index.html" target="_blank" rel="noreferrer">AIRPORT</a>
+        <img class="topbar-profile" src="../assets/profile/AbrahimProfilePicture.jpg" alt="Abrahim Borgi profile picture" />
+      </div>
     </header>
 
-    <section class="page-hero">
-      <div class="page-hero-grid">
-        <div>
-          <div class="page-meta">Article 03 / Semantic model</div>
-          <h1>Semantic Model</h1>
-          <p class="lead">
-            The interview case uses a compact star schema. The simulation case expands that idea into a wider loyalty model with customer, campaign, and transaction entities.
-          </p>
-        </div>
-        <div class="quote-block">
-          <h3>Model focus</h3>
-          <ul class="compact-list">
-            <li>The interview model centers on one transaction fact with a small set of business dimensions.</li>
-            <li>The simulation model extends the same reporting idea with loyalty, campaign, station, and cashier entities.</li>
-            <li>The shared goal is clear measure logic, simple drill paths, and reproducible semantic structure.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-panel plain">
-      <div class="gallery-grid two">
-        <div class="gallery-card">
-          <img src="../assets/interview/semanticmodel.png" alt="Interview semantic model" />
-          <div class="gallery-copy">
-            <div class="tile-meta">Interview semantic model</div>
-            <h3>Simple star schema</h3>
-            <p>The reporting model centers on `TRANSACTIONS`, with supporting dimensions for date, item, and site to support year-over-year, product, and geography analysis.</p>
-          </div>
-        </div>
-
-        <div class="gallery-card">
-          <img src="../assets/simulation/semanticmodel.png" alt="Simulation semantic model" />
-          <div class="gallery-copy">
-            <div class="tile-meta">Simulation semantic model</div>
-            <h3>Wider loyalty structure</h3>
-            <p>The simulation model adds customers, cards, campaigns, stations, cashiers, and transaction lines to support segmentation and campaign analysis.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="article-layout">
-      <article class="article-body">
-        <section>
-          <h2>Interview entities</h2>
-          <ul>
-            <li>`TRANSACTIONS` as the central fact table.</li>
-            <li>`DATE_DIM` for SPLY and period slicing.</li>
-            <li>`ITEM_MASTER` for product names, categories, and images.</li>
-            <li>`SITE_MASTER` for region, city, and station context.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Simulation entities</h2>
-          <ul>
-            <li>`LOYALITY_CUSTOMERS`, `CARDS`, and `SEGMENTATIONSGROUPS` describe the loyalty side.</li>
-            <li>`TRANSACTIONS` and `TRANSACTIONSLINES` capture purchase behavior.</li>
-            <li>`CAMPAIGNS` and `CAMPAIGN_TRANSACTIONS` support redemption analysis.</li>
-            <li>`STATIONS` and `CASHIERS` connect behavior to geography and point of sale.</li>
-          </ul>
-        </section>
-      </article>
-
-      <aside class="sidebar-column">
-        <div class="sidebar-card">
-          <div class="kicker">Why it matters</div>
-          <p>A clean semantic model keeps measures reusable, visuals easier to explain, and Tabular automation practical.</p>
-        </div>
-        <div class="sidebar-card">
-          <div class="kicker">Next article</div>
-          <p>The next page shows the actual Power BI pages in a short visual gallery.</p>
-          <div class="button-row">
-            <a class="button button-primary" href="./power-bi-report.html">Open report pages</a>
-          </div>
-        </div>
+    <div class="page-layout">
+      <aside class="side-menu">
+        <h2 class="side-menu-title">Menu</h2>
+        <nav class="side-nav" aria-label="Main navigation">
+          <a class="topbar-link" href="./index.html">Home</a>
+          <a class="topbar-link" href="./project-purpose.html">Purpose</a>
+          <a class="topbar-link" href="./architecture-pipeline.html">Pipeline</a>
+          <a class="topbar-link active" href="./semantic-model.html">Model</a>
+          <a class="topbar-link" href="./power-bi-report.html">Power BI</a>
+          <a class="topbar-link" href="./results.html">Results</a>
+          <a class="topbar-link" href="./repository.html">Repo</a>
+          <a class="topbar-link" href="./tabular-editor.html">Tabular</a>
+        </nav>
       </aside>
+
+      <main class="content-column">
+        <section class="page-hero">
+          <div class="page-meta">Model</div>
+          <p class="lead">A compact star schema and a wider loyalty model.</p>
+          <p>
+            This page shows the reporting structures behind the two cases,
+            from a small interview model to a broader simulation model with loyalty entities.
+          </p>
+
+          <div class="gallery-grid two">
+            <div class="gallery-card">
+              <img src="../assets/interview/semanticmodel.png" alt="Interview semantic model" />
+              <div class="gallery-copy">
+                <div class="tile-meta">Interview</div>
+                <h3>Star schema</h3>
+                <p>Transactions, date, item, site.</p>
+              </div>
+            </div>
+
+            <div class="gallery-card">
+              <img src="../assets/simulation/semanticmodel.png" alt="Simulation semantic model" />
+              <div class="gallery-copy">
+                <div class="tile-meta">Simulation</div>
+                <h3>Loyalty model</h3>
+                <p>Customers, cards, campaigns, stations.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   </div>
 </body>
